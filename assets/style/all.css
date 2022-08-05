@@ -444,11 +444,9 @@ banner 區塊設定
       background: url(../images/home-header-sm.png) no-repeat;
       background-size: cover; } }
   @media (max-width: 767px) {
-    .banner {
-      background: url(../images/home-header-sm.png); }
-      .banner .ad-area {
-        font-size: 1rem; }
-        .banner .ad-area .title {
-          font-size: 1.5rem; } }
+    .banner .ad-area {
+      font-size: 1rem; }
+      .banner .ad-area .title {
+        font-size: 1.5rem; } }
 
 /*# sourceMappingURL=all.css.map */
