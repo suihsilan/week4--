@@ -1,23 +1,430 @@
-.header {
-  height: 200px;
-  background-color: #00cc99; }
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;500;700&display=swap");
+/*放入所有變數相關的設定*/
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px; }
+  @media (max-width: 992px) {
+    .container {
+      max-width: 720px; } }
+  @media (max-width: 767px) {
+    .container {
+      max-width: 372px; } }
 
-.footer {
-  height: 200px;
-  background-color: #00cc99; }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*-----全域設定-----*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; }
+
+a {
+  display: block;
+  text-decoration: none; }
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px; }
+
+body {
+  font-family: "Noto Sans TC", sans-serif, "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 24px;
+  color: #000; }
+
+/*------文字置中設定-----*/
+.text-center {
+  text-align: center; }
+
+/*------文字大小 與行高 設定-----*/
+h1,
+.h1 {
+  font-size: 4rem; }
+
+h2,
+.h2 {
+  font-size: 3rem; }
+
+h3,
+.h3 {
+  font-size: 2.25rem; }
+
+h4,
+.h4 {
+  font-size: 1.5rem; }
+
+h5,
+.h5 {
+  font-size: 1.25rem; }
+
+.text-sm {
+  font-size: 0.875rem; }
+
+/*-----flex通用設定-----*/
+.d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s; }
-  .box:hover {
-    width: 200px;
-    background-color: #00cc99; }
+  display: flex; }
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.flex-row-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.jc-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.jc-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.jc-space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.ai-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.ai-baseline {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline; }
+
+/*-------其他通用設定-----------*/
+/*----------
+***************
+header 區塊設定 可以在另外寫：hide-text + :hover狀態 >>mixin
+***************
+------------*/
+.header {
+  background-color: #aa0601; }
+  .header .nav {
+    padding-top: 15.575px;
+    padding-bottom: 15.575px; }
+    .header .nav .logo {
+      width: 80px;
+      height: 48.57px;
+      background: url(../images/logo-white.png) no-repeat;
+      background-size: cover;
+      text-indent: 101%;
+      white-space: nowrap;
+      overflow: hidden; }
+  .header .navbar {
+    gap: 64px; }
+    .header .navbar-link {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: #fff; }
+      .header .navbar-link:hover {
+        background: #fe4c46;
+        border-radius: 30%;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s; }
+  @media (max-width: 767px) {
+    .header .nav {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding-bottom: 0; }
+      .header .nav .logo {
+        max-width: 100%;
+        margin-bottom: 15.715px; }
+    .header .navbar {
+      gap: 0px;
+      width: 100%;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .header .navbar-list {
+        margin: 0;
+        width: 50%;
+        border: 1px solid #fff; }
+      .header .navbar-link {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.5; }
+        .header .navbar-link:hover {
+          background: #fe4c46;
+          border-radius: 0%;
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s; } }
+
+/*----------
+***************
+footer 區塊設定
+***************
+------------*/
+.footer {
+  background: #aa0601; }
+  .footer .contacts-area {
+    padding-top: 60.02px; }
+    .footer .contacts-area .menu-lists {
+      gap: 3rem; }
+      .footer .contacts-area .menu-lists .menu-link {
+        font-family: "Noto Sans TC", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #fff;
+        padding: 0.25rem 0; }
+        .footer .contacts-area .menu-lists .menu-link:hover {
+          background: #fe4c46;
+          border-radius: 30%;
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s; }
+  .footer .hotline-lists {
+    padding-top: 35.98px; }
+    .footer .hotline-lists .contacts-link {
+      color: #fff;
+      font-size: 2.25rem;
+      line-height: 1.5; }
+      .footer .hotline-lists .contacts-link:hover {
+        background: #fe4c46;
+        border-radius: 10%;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s; }
+      .footer .hotline-lists .contacts-link .material-symbols-outlined {
+        font-size: 36px;
+        margin-right: 22px; }
+  .footer .media-lists {
+    gap: 32px; }
+    .footer .media-lists .media-link .media-logo {
+      width: 48px;
+      height: 48px; }
+    .footer .media-lists .media-link:hover {
+      background: #fe4c46;
+      border-radius: 30%;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+  .footer .copyright-area {
+    margin-top: 31px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-top: 1px solid #fff; }
+    .footer .copyright-area .copyright-claim {
+      color: #fff; }
+    .footer .copyright-area .policy {
+      gap: 3rem; }
+      .footer .copyright-area .policy .policy-link {
+        color: #fff;
+        font-size: 0.875rem;
+        line-height: 1.5; }
+        .footer .copyright-area .policy .policy-link:hover {
+          background: #fe4c46;
+          border-radius: 30%;
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s; }
+  @media (max-width: 992px) {
+    .footer .contacts-area {
+      padding-top: 56.02px; }
+    .footer .hotline-lists {
+      padding-top: 31.98px; }
+    .footer .media-lists {
+      gap: 16px; }
+      .footer .media-lists .media-link .media-logo {
+        width: 40px;
+        height: 40px; } }
+  @media (max-width: 767px) {
+    .footer .contacts-area {
+      padding-top: 24px; }
+    .footer .menu-lists {
+      display: none; }
+    .footer .hotline-lists {
+      padding-top: 0px; }
+      .footer .hotline-lists .phone {
+        margin-bottom: 8px; }
+      .footer .hotline-lists .contacts-link {
+        font-size: 1rem; }
+        .footer .hotline-lists .contacts-link .material-symbols-outlined {
+          font-size: 18px;
+          margin-right: 11px; }
+    .footer .media-lists {
+      gap: 8px; }
+      .footer .media-lists .media-link .media-logo {
+        width: 24px;
+        height: 24px; }
+    .footer .copyright-area {
+      margin-top: 23px;
+      padding-top: 16px;
+      padding-bottom: 24px; }
+      .footer .copyright-area .copyright-claim {
+        width: 100%;
+        margin-bottom: 8px; }
+      .footer .copyright-area .policy {
+        gap: 8px; }
+        .footer .copyright-area .policy .policy-list {
+          width: 100%; }
+          .footer .copyright-area .policy .policy-list .policy-link {
+            font-size: 1rem; } }
 
 /*# sourceMappingURL=all.css.map */
