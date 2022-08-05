@@ -27,3 +27,10 @@
     max-width: 372px;
   }
 }
+
+//@extend a:hover設定
+%btn-hover {
+  background: lighten($primary, 30%); //將紅色調亮30%;
+  border-radius: 30%;
+  transition: 0.3s;
+}

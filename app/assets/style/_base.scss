@@ -29,7 +29,7 @@ a {
 body {
   font-family: $font-noto, $font-roboto;
   font-size: $font-size-base; //16px
-  line-height: 24px; //24px
+  line-height: 1.5; //24px
   color: $dark;
 }
 
@@ -38,6 +38,9 @@ body {
   text-align: center;
 }
 
+.text-r {
+  text-align: right;
+}
 /*------文字大小 與行高 設定-----*/
 h1,
 .h1 {
@@ -86,6 +89,10 @@ h5,
 .flex-wrap {
   flex-wrap: wrap;
 } //換行
+
+.jc-end {
+  justify-content: flex-end;
+}
 
 .jc-center {
   justify-content: center;

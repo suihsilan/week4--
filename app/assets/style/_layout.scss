@@ -31,9 +31,7 @@ header 區塊設定 可以在另外寫：hide-text + :hover狀態 >>mixin
       color: $white;
 
       &:hover {
-        background: lighten($primary, 30%); //將紅色調亮30%;
-        border-radius: 30%;
-        transition: 0.3s;
+        @extend %btn-hover;
       }
     }
   }
@@ -71,7 +69,7 @@ header 區塊設定 可以在另外寫：hide-text + :hover狀態 >>mixin
 
         &:hover {
           background: lighten($primary, 30%); //將紅色調亮30%;
-          border-radius: 0%;
+          border-radius: 30%;
           transition: 0.3s;
         }
       }
@@ -103,9 +101,7 @@ footer 區塊設定
         padding: $space-1 0;
 
         &:hover {
-          background: lighten($primary, 30%); //將紅色調亮30%;
-          border-radius: 30%;
-          transition: 0.3s;
+          @extend %btn-hover;
         }
       }
     }
@@ -120,9 +116,7 @@ footer 區塊設定
       line-height: 1.5;
 
       &:hover {
-        background: lighten($primary, 30%); //將紅色調亮30%;
-        border-radius: 10%;
-        transition: 0.3s;
+        @extend %btn-hover;
       }
 
       .material-symbols-outlined {
@@ -141,9 +135,7 @@ footer 區塊設定
         height: 48px;
       }
       &:hover {
-        background: lighten($primary, 30%); //將紅色調亮30%;
-        border-radius: 30%;
-        transition: 0.3s;
+        @extend %btn-hover;
       }
     }
   }
@@ -167,9 +159,7 @@ footer 區塊設定
         line-height: 1.5;
 
         &:hover {
-          background: lighten($primary, 30%); //將紅色調亮30%;
-          border-radius: 30%;
-          transition: 0.3s;
+          @extend %btn-hover;
         }
       }
     }

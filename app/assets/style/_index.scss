@@ -1,0 +1,57 @@
+/*----------
+***************
+banner 區塊設定
+***************
+------------*/
+
+.banner {
+  max-width: 100%;
+  height: 787px;
+  background: url(../images/home-header.png) no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  .container {
+    height: 100%; //內層的ad-area才有排板的依據
+  }
+
+  .ad-area {
+    font-family: $font-noto;
+    font-size: $h3-font-size; //36px  lh: 1.5
+    color: $danger;
+
+    .title {
+      font-size: $h1-font-size; //64px
+      font-weight: bold;
+    }
+
+    .buy-link {
+      display: inline-block;
+      font-size: $h5-font-size;
+      background-color: $primary;
+      color: $white;
+      padding: 6px 12px;
+      margin-top: 4px;
+
+      &:hover {
+        @extend %btn-hover;
+      }
+    }
+  }
+  @include pad {
+    background: url(../images/home-header-sm.png) no-repeat;
+    background-size: cover;
+  }
+
+  @include mobile {
+    background: url(../images/home-header-sm.png);
+
+    .ad-area {
+      font-size: $font-size-base;
+
+      .title {
+        font-size: $h4-font-size;
+      }
+    }
+  }
+}

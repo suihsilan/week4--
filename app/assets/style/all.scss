@@ -10,16 +10,4 @@
 
 @import "./base"; //自定義reset
 @import "./layout"; //共用框架 第一層
-// @import "./index"; //index首頁
-
-// .box {
-//   width: 100px;
-//   height: 100px;
-//   background-color: red;
-//   display: flex;
-//   transition: all 0.5s;
-//   &:hover {
-//     width: 200px;
-//     background-color: $color;
-//   }
-// }
+@import "./index"; //index首頁
