@@ -1,23 +1,25 @@
-$color: #00cc99;
+//引入font-family 與 font-weight font-style
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap");
 
-.header {
-  height: 200px;
-  background-color: #00cc99;
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;500;700&display=swap");
 
-.footer {
-  height: 200px;
-  background-color: #00cc99;
-}
+//引入變數scss 設定頁面 && 先後順序很重要
+@import "./variable"; //變數
+@import "./mixin";
+@import "./reset"; //reset css
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  display: flex;
-  transition: all 0.5s;
-  &:hover {
-    width: 200px;
-    background-color: $color;
-  }
-}
+@import "./base"; //自定義reset
+@import "./layout"; //共用框架 第一層
+// @import "./index"; //index首頁
+
+// .box {
+//   width: 100px;
+//   height: 100px;
+//   background-color: red;
+//   display: flex;
+//   transition: all 0.5s;
+//   &:hover {
+//     width: 200px;
+//     background-color: $color;
+//   }
+// }

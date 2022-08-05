@@ -1,0 +1,29 @@
+//斷點數值設定
+
+@mixin pad {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+//設定container容器依據rwd的最大寬度
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  @include pad {
+    max-width: 720px;
+  }
+
+  @include mobile {
+    max-width: 372px;
+  }
+}

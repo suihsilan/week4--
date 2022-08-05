@@ -1,0 +1,50 @@
+/*放入所有變數相關的設定*/
+
+//font-family
+$font-noto: "Noto Sans TC", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+
+// Font Size
+$font-size-base: 1rem; //16px-網站預設值
+
+$font-size-sm: $font-size-base * 0.875; //14px
+
+$h1-font-size: $font-size-base * 4; //64px
+$h2-font-size: $font-size-base * 3; //48px
+$h3-font-size: $font-size-base * 2.25; //36px
+$h4-font-size: $font-size-base * 1.5; // 24px
+$h5-font-size: $font-size-base * 1.25; // 20px
+
+// 行高
+
+// Color system
+$primary: #aa0601;
+$secondary: #fbf2f2;
+$danger: #650300;
+$dark: #000;
+$dark-gray: #707070;
+$light-gray: #dee2e6;
+$shadow-gray: #00000029;
+$white: #fff;
+$hover: yellowgreen; ///在設定
+
+//space
+$space: 1rem; //16px
+
+$space-1: $space * 0.25; //4px
+$space-2: $space * 0.5; //8px
+$space-3: $space * 0.625; //10px
+$space-4: $space; //16px
+$space-5: $space * 1.25; //20px
+$space-6: $space * 1.5; //24px
+$space-7: $space * 1.75; //28px
+$space-8: $space * 1.875; //30px
+$space-9: $space * 2; //32px
+$space-10: $space * 2.25; //36px
+$space-11: $space * 2.5; //40px
+$space-12: $space * 3; //48px;
+$space-13: $space * 3.75; //60px
+$space-14: $space * 4; //64px
+$space-15: $space * 4.875; //78px
+$space-16: $space * 5; //80px
+$space-17: $space * 5.5; //88px

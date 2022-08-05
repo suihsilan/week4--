@@ -1,0 +1,110 @@
+/*-----全域設定-----*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} //全域設定
+
+img {
+  //圖片在隨著父層放大時貼其父層，但有其極限值，不會跟隨著無限放大而失真;screen縮小時，圖片會貼齊父層/自適應，也不會無限縮小
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; //去除圖片底下的2-3px空白
+  // display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  // color: $white;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+body {
+  font-family: $font-noto, $font-roboto;
+  font-size: $font-size-base; //16px
+  line-height: 24px; //24px
+  color: $dark;
+}
+
+/*------文字置中設定-----*/
+.text-center {
+  text-align: center;
+}
+
+/*------文字大小 與行高 設定-----*/
+h1,
+.h1 {
+  font-size: $h1-font-size;
+}
+
+h2,
+.h2 {
+  font-size: $h2-font-size;
+}
+
+h3,
+.h3 {
+  font-size: $h3-font-size;
+}
+
+h4,
+.h4 {
+  font-size: $h4-font-size;
+}
+
+h5,
+.h5 {
+  font-size: $h5-font-size;
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+/*-----flex通用設定-----*/
+
+.d-flex {
+  //宣告flex設定
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+} //資訊流向column
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+} //資訊流向row-reverse
+
+.flex-wrap {
+  flex-wrap: wrap;
+} //換行
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.jc-space-around {
+  justify-content: space-around;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-baseline {
+  align-items: baseline;
+}
+
+/*-------其他通用設定-----------*/

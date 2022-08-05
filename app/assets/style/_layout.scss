@@ -1,0 +1,257 @@
+/*----------
+***************
+header 區塊設定 可以在另外寫：hide-text + :hover狀態 >>mixin
+***************
+------------*/
+.header {
+  background-color: $primary;
+
+  .nav {
+    //這裡padding不要合在一起寫，權重+20，導致container的paddingl/r吃不到
+    padding-top: 15.575px;
+    padding-bottom: 15.575px;
+
+    .logo {
+      width: 80px;
+      height: 48.57px;
+      background: url(../images/logo-white.png) no-repeat;
+      background-size: cover; //讓背景圖「不變形」、「寬高等比例」、「在必要時局部裁切」鋪滿整個容器空間
+      text-indent: 101%; //圖片取代文字
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  .navbar {
+    gap: 64px;
+
+    &-link {
+      font-size: $h5-font-size; //20px
+      line-height: 1.5; //30px
+      color: $white;
+
+      &:hover {
+        background: lighten($primary, 30%); //將紅色調亮30%;
+        border-radius: 30%;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  @include mobile {
+    //rwd 手機斷點設定
+    .nav {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 0;
+
+      .logo {
+        max-width: 100%;
+        margin-bottom: 15.715px;
+      }
+    }
+
+    .navbar {
+      gap: 0px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      &-list {
+        margin: 0;
+        width: 50%; //兩欄
+        border: 1px solid $white;
+      }
+
+      &-link {
+        display: block;
+        font-size: $font-size-base; //16px
+        line-height: 1.5; //24px
+
+        &:hover {
+          background: lighten($primary, 30%); //將紅色調亮30%;
+          border-radius: 0%;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+/*----------
+***************
+footer 區塊設定
+***************
+------------*/
+
+.footer {
+  background: $primary;
+
+  .contacts-area {
+    padding-top: 60.02px; //$space-12
+
+    .menu-lists {
+      gap: $space-12; //48px
+
+      .menu-link {
+        font-family: $font-noto;
+        font-weight: 400;
+        font-size: $font-size-base;
+        line-height: 1.5;
+        color: $white;
+        padding: $space-1 0;
+
+        &:hover {
+          background: lighten($primary, 30%); //將紅色調亮30%;
+          border-radius: 30%;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  .hotline-lists {
+    padding-top: 35.98px;
+
+    .contacts-link {
+      color: $white;
+      font-size: $h3-font-size; //36px
+      line-height: 1.5;
+
+      &:hover {
+        background: lighten($primary, 30%); //將紅色調亮30%;
+        border-radius: 10%;
+        transition: 0.3s;
+      }
+
+      .material-symbols-outlined {
+        font-size: 36px;
+        margin-right: 22px;
+      }
+    }
+  }
+
+  .media-lists {
+    gap: 32px;
+
+    .media-link {
+      .media-logo {
+        width: 48px;
+        height: 48px;
+      }
+      &:hover {
+        background: lighten($primary, 30%); //將紅色調亮30%;
+        border-radius: 30%;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .copyright-area {
+    margin-top: 31px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-top: 1px solid $white;
+
+    .copyright-claim {
+      color: $white;
+    }
+
+    .policy {
+      gap: $space-12; //48px
+
+      .policy-link {
+        color: $white;
+        font-size: $font-size-sm;
+        line-height: 1.5;
+
+        &:hover {
+          background: lighten($primary, 30%); //將紅色調亮30%;
+          border-radius: 30%;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  @include pad {
+    .contacts-area {
+      padding-top: 56.02px;
+    }
+
+    .hotline-lists {
+      padding-top: 31.98px;
+    }
+
+    .media-lists {
+      gap: 16px;
+
+      .media-link {
+        .media-logo {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  @include mobile {
+    .contacts-area {
+      padding-top: 24px;
+    }
+
+    .menu-lists {
+      display: none;
+    }
+
+    .hotline-lists {
+      padding-top: 0px;
+
+      .phone {
+        margin-bottom: 8px;
+      }
+
+      .contacts-link {
+        font-size: $font-size-base; //16px
+
+        .material-symbols-outlined {
+          font-size: 18px;
+          margin-right: 11px;
+        }
+      }
+    }
+
+    .media-lists {
+      gap: 8px;
+
+      .media-link {
+        .media-logo {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .copyright-area {
+      margin-top: 23px; //24px
+      padding-top: 16px;
+      padding-bottom: 24px;
+
+      .copyright-claim {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+
+      .policy {
+        gap: 8px;
+
+        .policy-list {
+          width: 100%;
+          .policy-link {
+            font-size: $font-size-base;
+          }
+        }
+      }
+    }
+  }
+}
