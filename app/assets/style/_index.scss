@@ -53,3 +53,83 @@ banner 區塊設定
     }
   }
 }
+
+/*----------
+***************
+section feature 區塊區塊設定 
+須在重構一下icon的大小
+***************
+------------*/
+.feature {
+  font-family: $font-noto;
+  font-size: $h4-font-size; //24px
+  font-weight: bold;
+  color: $danger;
+  background: $secondary;
+
+  .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .feature-title {
+    font-size: $h2-font-size; //48px
+    margin-bottom: 32.08px;
+  }
+
+  .feature-lists {
+    width: 100%;
+    gap: 24px;
+  }
+
+  .feature-item {
+    width: 25%;
+  }
+
+  .item-img {
+    width: 83.83px;
+    height: 83.83px;
+    margin-bottom: 24.33px;
+  }
+
+  .item-icon {
+    margin-bottom: 8px;
+  }
+
+  .item-title {
+    font-size: $h4-font-size;
+  }
+
+  .item-text {
+    font-size: $font-size-base;
+    font-weight: 400;
+    color: $dark;
+    text-align: left;
+  }
+
+  @include pad {
+    .feature-lists {
+      flex-wrap: wrap;
+    }
+
+    .feature-item {
+      width: 47%;
+    }
+  }
+
+  @include mobile {
+    .container {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .feature-title {
+      font-size: $h4-font-size;
+    }
+    .feature-lists {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
