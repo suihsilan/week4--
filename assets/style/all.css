@@ -512,4 +512,61 @@ section feature 區塊區塊設定
           -ms-flex-align: center;
               align-items: center; } }
 
+/*----------
+***************
+section classic 區塊設定 
+***************
+------------*/
+.classic-title {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #650300;
+  margin-bottom: 48px; }
+
+.classic-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px; }
+  .classic-lists .list-icon {
+    width: 416px;
+    height: 416px;
+    margin-bottom: 8px; }
+  .classic-lists .list-name {
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #aa0601;
+    text-align: center; }
+
+.classic .container {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+@media (max-width: 992px) {
+  .classic .list-icon {
+    width: 336px;
+    height: 336px; } }
+
+@media (max-width: 767px) {
+  .classic-title {
+    font-size: 1.5rem;
+    margin-bottom: 24px; }
+  .classic .list-icon {
+    width: 348px;
+    height: 348px; }
+  .classic .container {
+    padding-top: 40px;
+    padding-bottom: 40px; } }
+
 /*# sourceMappingURL=all.css.map */
