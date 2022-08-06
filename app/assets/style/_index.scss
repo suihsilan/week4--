@@ -133,3 +133,70 @@ section feature 區塊區塊設定
     }
   }
 }
+
+/*----------
+***************
+section classic 區塊設定 
+***************
+------------*/
+.classic {
+  &-title {
+    font-family: $font-noto;
+    font-size: $h2-font-size;
+    font-weight: bold;
+    color: $danger;
+    margin-bottom: 48px;
+  }
+
+  &-lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .list-icon {
+      width: 416px;
+      height: 416px;
+      margin-bottom: 8px;
+    }
+
+    .list-name {
+      font-family: $font-roboto;
+      font-size: $h2-font-size;
+      font-weight: 900;
+      font-style: italic;
+      color: $primary;
+      text-align: center;
+    }
+  }
+
+  .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include pad {
+    .list-icon {
+      width: 336px;
+      height: 336px;
+    }
+  }
+
+  @include mobile {
+    &-title {
+      font-size: $h4-font-size;
+      margin-bottom: 24px;
+    }
+
+    .list-icon {
+      width: 348px;
+      height: 348px;
+    }
+
+    .container {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+}
