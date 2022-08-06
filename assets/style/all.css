@@ -449,4 +449,67 @@ banner 區塊設定
       .banner .ad-area .title {
         font-size: 1.5rem; } }
 
+/*----------
+***************
+section feature 區塊區塊設定 
+須在重構一下icon的大小
+***************
+------------*/
+.feature {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #650300;
+  background: #fbf2f2; }
+  .feature .container {
+    padding-top: 80px;
+    padding-bottom: 80px; }
+  .feature .feature-title {
+    font-size: 3rem;
+    margin-bottom: 32.08px; }
+  .feature .feature-lists {
+    width: 100%;
+    gap: 24px; }
+  .feature .feature-item {
+    width: 25%; }
+  .feature .item-img {
+    width: 83.83px;
+    height: 83.83px;
+    margin-bottom: 24.33px; }
+  .feature .item-icon {
+    margin-bottom: 8px; }
+  .feature .item-title {
+    font-size: 1.5rem; }
+  .feature .item-text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    text-align: left; }
+  @media (max-width: 992px) {
+    .feature .feature-lists {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+    .feature .feature-item {
+      width: 47%; } }
+  @media (max-width: 767px) {
+    .feature .container {
+      padding-top: 40px;
+      padding-bottom: 40px; }
+    .feature .feature-title {
+      font-size: 1.5rem; }
+    .feature .feature-lists {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+
 /*# sourceMappingURL=all.css.map */
