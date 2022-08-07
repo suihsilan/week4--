@@ -200,3 +200,103 @@ section classic 區塊設定
     }
   }
 }
+
+/*----------
+***************
+ section--union 區塊區塊設定 
+***************b
+------------*/
+.union {
+  background: url(../images/index-bg.png) no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &-title {
+    font-family: $font-noto;
+    font-size: $h2-font-size;
+    line-height: 1.5;
+    font-weight: bold;
+    color: $white;
+    margin-bottom: 48px;
+  }
+
+  &-lists {
+    .union-img {
+      width: 648px;
+      height: 240px;
+    }
+    .union-img-sm {
+      display: none;
+      width: 348px;
+      height: 240px;
+    }
+    .list-name {
+      font-family: $font-roboto;
+      font-size: $h2-font-size;
+      line-height: 1.5;
+      font-weight: 900;
+      font-style: italic;
+      color: $primary;
+      text-align: center;
+      background-color: $white;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+
+  .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include pad {
+    background: url(../images/index-bg-sm.png) no-repeat;
+    background-position: left top;
+    &-lists {
+      flex-wrap: wrap;
+      gap: 24px;
+      width: 100%;
+
+      &-item {
+        width: 50%;
+      }
+      .union-img {
+        width: 696px;
+      }
+      .list-name {
+        font-family: $font-roboto;
+        font-size: $h2-font-size;
+        line-height: 1.5;
+        font-weight: 900;
+        font-style: italic;
+        color: $primary;
+        text-align: center;
+        background-color: $white;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+    }
+  }
+
+  @include mobile {
+    background: url(../images/index-bg-md.png) no-repeat;
+
+    &-title {
+      font-size: $h4-font-size;
+      margin-bottom: 24px;
+    }
+
+    &-lists {
+      .union-img {
+        display: none;
+      }
+      .union-img-sm {
+        display: inline-block;
+      }
+    }
+    .container {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+}
