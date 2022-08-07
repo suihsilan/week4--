@@ -569,4 +569,79 @@ section classic 區塊設定
     padding-top: 40px;
     padding-bottom: 40px; } }
 
+/*----------
+***************
+ section--union 區塊區塊設定 
+***************b
+------------*/
+.union {
+  background: url(../images/index-bg.png) no-repeat;
+  background-position: center center;
+  background-size: cover; }
+  .union-title {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 48px; }
+  .union-lists .union-img {
+    width: 648px;
+    height: 240px; }
+  .union-lists .union-img-sm {
+    display: none;
+    width: 348px;
+    height: 240px; }
+  .union-lists .list-name {
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 900;
+    font-style: italic;
+    color: #aa0601;
+    text-align: center;
+    background-color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px; }
+  .union .container {
+    padding-top: 80px;
+    padding-bottom: 80px; }
+  @media (max-width: 992px) {
+    .union {
+      background: url(../images/index-bg-sm.png) no-repeat;
+      background-position: left top; }
+      .union-lists {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        gap: 24px;
+        width: 100%; }
+        .union-lists-item {
+          width: 50%; }
+        .union-lists .union-img {
+          width: 696px; }
+        .union-lists .list-name {
+          font-family: "Roboto", sans-serif;
+          font-size: 3rem;
+          line-height: 1.5;
+          font-weight: 900;
+          font-style: italic;
+          color: #aa0601;
+          text-align: center;
+          background-color: #fff;
+          padding-top: 8px;
+          padding-bottom: 8px; } }
+  @media (max-width: 767px) {
+    .union {
+      background: url(../images/index-bg-md.png) no-repeat; }
+      .union-title {
+        font-size: 1.5rem;
+        margin-bottom: 24px; }
+      .union-lists .union-img {
+        display: none; }
+      .union-lists .union-img-sm {
+        display: inline-block; }
+      .union .container {
+        padding-top: 40px;
+        padding-bottom: 40px; } }
+
 /*# sourceMappingURL=all.css.map */
