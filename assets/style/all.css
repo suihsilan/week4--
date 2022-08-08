@@ -849,4 +849,108 @@ section classic 區塊設定
     padding-top: 40px;
     padding-bottom: 64px; } }
 
+.branchlocation .branch-location-title {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 32px;
+  padding-left: 16px;
+  border-left: 8px solid #9f1213; }
+
+.branchlocation .branch-ops {
+  font-size: 1.5rem;
+  line-height: 36px;
+  font-weight: 400;
+  margin-right: 16px; }
+
+.branchlocation .b-selection {
+  width: 304px;
+  height: 38px;
+  border: 1px solid #ced4da;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  margin-bottom: 40px; }
+
+.branchlocation .branch-info .branch-lists {
+  width: 39%; }
+
+.branchlocation .branch-info .branch-map {
+  width: 59%; }
+
+.branchlocation .branch-card-title {
+  font-size: 1.5rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  border: 1px solid #00000020; }
+
+.branchlocation .select-cardbody {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  border: 1px solid #00000020; }
+  .branchlocation .select-cardbody .material-symbols-outlined {
+    font-size: 18px;
+    margin-right: 11px; }
+
+.branchlocation .container {
+  padding-top: 96px;
+  padding-bottom: 80px; }
+
+@media (max-width: 992px) {
+  .branchlocation .branch-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .branchlocation .branch-info .branch-lists {
+      width: 100%;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 24px; }
+      .branchlocation .branch-info .branch-lists .branch-pic {
+        width: 43%; }
+      .branchlocation .branch-info .branch-lists .branch-card {
+        width: 55%; }
+    .branchlocation .branch-info .branch-map {
+      width: 100%;
+      height: 414px; }
+  .branchlocation .branch-lists {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .branchlocation .container {
+    padding-top: 80px;
+    padding-bottom: 80px; } }
+
+@media (max-width: 767px) {
+  .branchlocation .branch-location-title {
+    font-size: 1.5rem;
+    margin-bottom: 24px; }
+  .branchlocation .branch-ops {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-right: 8px; }
+  .branchlocation .branch-info .branch-lists {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .branchlocation .branch-info .branch-lists .branch-pic {
+      width: 100%; }
+    .branchlocation .branch-info .branch-lists .branch-card {
+      width: 100%; }
+  .branchlocation .container {
+    padding-top: 40px;
+    padding-bottom: 64px; } }
+
 /*# sourceMappingURL=all.css.map */
