@@ -14,7 +14,7 @@
     .container {
       max-width: 372px; } }
 
-.header .navbar-link:hover, .footer .contacts-area .menu-lists .menu-link:hover, .footer .hotline-lists .contacts-link:hover, .footer .media-lists .media-link:hover, .footer .copyright-area .policy .policy-link:hover, .banner .ad-area .buy-link:hover {
+.header .navbar-link:hover, .footer .contacts-area .menu-lists .menu-link:hover, .footer .hotline-lists .contacts-link:hover, .footer .media-lists .media-link:hover, .footer .copyright-area .policy .policy-link:hover, .banner .ad-area .buy-link:hover, .response .btn:hover {
   background: #fe4c46;
   border-radius: 30%;
   -webkit-transition: 0.3s;
@@ -618,18 +618,7 @@ section classic 區塊設定
         .union-lists-item {
           width: 50%; }
         .union-lists .union-img {
-          width: 696px; }
-        .union-lists .list-name {
-          font-family: "Roboto", sans-serif;
-          font-size: 3rem;
-          line-height: 1.5;
-          font-weight: 900;
-          font-style: italic;
-          color: #aa0601;
-          text-align: center;
-          background-color: #fff;
-          padding-top: 8px;
-          padding-bottom: 8px; } }
+          width: 696px; } }
   @media (max-width: 767px) {
     .union {
       background: url(../images/index-bg-md.png) no-repeat; }
@@ -643,5 +632,138 @@ section classic 區塊設定
       .union .container {
         padding-top: 40px;
         padding-bottom: 40px; } }
+
+/*----------
+***************
+ section--review  區塊區塊設定 
+***************b
+------------*/
+.review-title {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 3rem;
+  color: #650300;
+  font-weight: bold;
+  margin-bottom: 48px; }
+
+.review-lists {
+  gap: 24px; }
+  .review-lists_item {
+    width: 25%;
+    border-radius: 4px; }
+  .review-lists-img {
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.review-content {
+  -webkit-box-shadow: 0px 2px 6px #00000029;
+          box-shadow: 0px 2px 6px #00000029;
+  padding: 16px; }
+  .review-content span {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px; }
+  .review-content p {
+    font-weight: 400;
+    padding-bottom: 72px; }
+  .review-content small {
+    font-size: 14px;
+    color: #707070; }
+
+.review .container {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+@media (max-width: 992px) {
+  .review-lists {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .review-lists_item {
+      width: 48%; } }
+
+@media (max-width: 767px) {
+  .review-title {
+    font-size: 1.5rem;
+    margin-bottom: 24px; }
+  .review-lists {
+    gap: 16px; }
+    .review-lists_item {
+      width: 96%; }
+  .review .container {
+    padding-top: 40px;
+    padding-bottom: 40px; } }
+
+/*----------
+***************
+ section--response  區塊區塊設定 
+***************
+------------*/
+.response {
+  background-color: #fbf2f2; }
+  .response-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #650300;
+    margin-bottom: 48px; }
+  .response-form {
+    max-width: 636px;
+    margin: 0 auto; }
+  .response-description {
+    font-size: 1rem;
+    margin-bottom: 24px; }
+  .response .input-box {
+    margin-bottom: 16px; }
+    .response .input-box .form-control {
+      display: block;
+      width: 100%;
+      height: 36px;
+      margin-top: 8px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      padding-left: 12px; }
+  .response .message-textarea {
+    margin-bottom: 16px; }
+    .response .message-textarea .form-control {
+      resize: none;
+      height: 136px; }
+  .response .agree-box {
+    margin-bottom: 48px; }
+    .response .agree-box .agree-text {
+      width: 24px;
+      height: 24px;
+      margin-right: 4px;
+      border: 2px solid #000; }
+  .response .btn {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 900;
+    color: #fff;
+    background-color: #aa0601;
+    padding: 14px 174px; }
+    .response .btn:active {
+      background-color: #921e5c; }
+  .response .container {
+    padding-top: 80px;
+    padding-bottom: 80px; }
+  @media (max-width: 992px) {
+    .response-title {
+      margin-bottom: 24px; }
+    .response-form {
+      max-width: 576px; } }
+
+@media (max-width: 992px) and (max-width: 767px) {
+  .response-title {
+    font-size: 1.5rem; }
+  .response-form {
+    min-width: 348px; }
+  .response .agree-box {
+    margin-bottom: 24px; }
+  .response .btn {
+    width: 100%; }
+  .response .container {
+    padding-top: 40px;
+    padding-bottom: 40px; } }
+
+.pure-form {
+  background-color: pink; }
 
 /*# sourceMappingURL=all.css.map */

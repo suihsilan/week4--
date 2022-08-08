@@ -19,7 +19,7 @@
       <div class="container nav d-flex jc-space-between ai-center">
         <div class="logo">
           <h1>
-            <a class="" href="#">Promise-Desert 眼鏡官網LOGO</a>
+            <a class="" href="./index.html">Promise-Desert 眼鏡官網LOGO</a>
           </h1>
         </div>
         <ul class="navbar d-flex flex-wrap">
@@ -27,7 +27,7 @@
             <a href="#" class="navbar-link text-center">系列鏡框</a>
           </li>
           <li class="navbar-list">
-            <a href="#" class="navbar-link text-center">門市據點</a>
+            <a href="./storelist.html" class="navbar-link text-center">門市據點</a>
           </li>
           <li class="navbar-list">
             <a href="#" class="navbar-link text-center">部落格</a>
@@ -185,45 +185,132 @@
 <!-- section--review 區塊-->
 <section class="review">
   <div class="container">
-    <h3 class="review title"></h3>
-    <ul class="review-lists">
-      <li class="review-list_item">
-        <img src="" alt="" class="review-img" />
-      </li>
-      <div class="review-content">
-        <span class="reviewer"></span>
-        <p class="review-descri"></p>
-        <small></small>
-      </div>
-      <li class="review-list_item">
-        <img src="" alt="" class="review-img" />
+    <h3 class="review-title text-center">顧客推薦</h3>
+    <ul class="review-lists d-flex jc-center">
+      <li class="review-lists_item">
+        <img
+          src="./assets/images/home-section5-1.png"
+          alt="guest avatar"
+          class="review-img"
+        />
         <div class="review-content">
-          <span class="reviewer"></span>
-          <p class="review-descri"></p>
-          <small></small>
+          <span>Jessy</span>
+          <p class="review-descri">眼鏡品質優良，下次還會想來這邊購買！</p>
+          <small>2021/06/20</small>
         </div>
       </li>
-      <li class="review-list_item">
-        <img src="" alt="" class="review-img" />
+      <li class="review-lists_item">
+        <img
+          src="./assets/images/home-section5-2.png"
+          alt="guest avatar"
+          class="review-img"
+        />
         <div class="review-content">
-          <span class="reviewer"></span>
-          <p class="review-descri"></p>
-          <small></small>
+          <span>凱倫</span>
+          <p class="review-descri">
+            做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！
+          </p>
+          <small>2021/04/18</small>
         </div>
       </li>
-      <li class="review-list_item">
-        <img src="" alt="" class="review-img" />
+      <li class="review-lists_item">
+        <img
+          src="./assets/images/home-section5-3.png"
+          alt="guest avatar"
+          class="review-img"
+        />
         <div class="review-content">
-          <span class="reviewer"></span>
-          <p class="review-descri"></p>
-          <small></small>
+          <span>悠悠</span>
+          <p class="review-descri">
+            謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！
+          </p>
+          <small>2020/12/25</small>
+        </div>
+      </li>
+      <li class="review-lists_item">
+        <img
+          src="./assets/images/home-section5-4.png"
+          alt="guest avatar"
+          class="review-img"
+        />
+        <div class="review-content">
+          <span>Kyuan</span>
+          <p class="review-descri">服務很好，品質沒有任何問題，非常喜歡。</p>
+          <small>2020/10/31</small>
         </div>
       </li>
     </ul>
   </div>
 </section>
 
-<!-- section--contact 區塊-->
+<!-- section--response 區塊-->
+<section class="response">
+  <div class="container">
+    <h3 class="response-title text-center">聯絡我們</h3>
+    <form action="" class="response-form">
+      <p class="response-description">
+        我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。
+      </p>
+      <div class="input-box">
+        <label for="name">姓名</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="陳小明"
+          name="name"
+        />
+      </div>
+      <div class="input-box">
+        <label for="phone">聯絡電話</label>
+        <input
+          type="tel"
+          class="form-control"
+          id="phone"
+          placeholder="0912-345-678"
+          name="tel"
+        />
+      </div>
+      <div class="input-box">
+        <label for="email">電子郵件</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="example@email.com"
+          name="email"
+        />
+      </div>
+      <div class="input-box message-textarea">
+        <label for="formTextarea">意見反應</label>
+        <textarea
+          type="text"
+          class="form-control"
+          id="formTextarea"
+          name="formTextarea"
+          rows="8"
+          cols="40"
+        >
+請輸入你的意見</textarea
+        >
+      </div>
+      <div class="agree-box d-flex">
+        <input
+          type="checkbox"
+          class="agree-text"
+          id="private-policy"
+          name="private-policy"
+        />
+        <label for="private-policy"
+          >我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label
+        >
+      </div>
+      <div class="btn-area d-flex jc-center">
+        <button type="submit" class="btn">確認送出</button>
+      </div>
+    </form>
+  </div>
+</section>
 
 
     <footer class="footer">
