@@ -1,34 +1,53 @@
-//斷點數值設定
-
-@mixin pad {
-  @media (max-width: 992px) {
-    @content;
+@mixin respond($breakpoint) {
+  @if $breakpoint == ipad-landscape {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == ipad-portrait {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $breakpoint == mobile {
+    @media (max-width: 576px) {
+      @content;
+    }
   }
 }
 
-@mixin mobile {
-  @media (max-width: 767px) {
-    @content;
-  }
+@mixin hide-text {
+  text-indent: 101%; //圖片取代文字
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-//設定container容器依據rwd的最大寬度
 .container {
   max-width: 1320px;
   margin: 0 auto;
   padding-left: 12px;
   padding-right: 12px;
 
-  @include pad {
+  @include respond(ipad-landscape) {
+    max-width: 960px;
+  }
+
+  @include respond(ipad-portrait) {
     max-width: 720px;
   }
 
-  @include mobile {
-    max-width: 372px;
+  @include respond(mobile) {
+    max-width: 540px;
   }
 }
 
-//@extend a:hover設定
+//
+
+// @mixin hide-menu {
+//   display: none;
+// }
+
+//@extend 做樣式設定
 %btn-hover {
   background: lighten($primary, 30%); //將紅色調亮30%;
   border-radius: 30%;

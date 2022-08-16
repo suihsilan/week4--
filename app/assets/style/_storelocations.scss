@@ -1,100 +1,100 @@
-.storelocations {
-  .stores-location-title {
-    font-family: $font-noto;
-    font-size: $h2-font-size;
-    font-weight: 900;
-    margin-bottom: 32px;
-    padding-left: 16px;
-    border-left: 8px solid $border-left;
-  }
-  .cities-ops {
-    font-size: $h4-font-size;
-    line-height: 36px;
-    font-weight: 400;
-    margin-right: 16px;
-  }
-  .selection {
-    width: 304px;
-    height: 38px;
-    border: 1px solid #ced4da;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 12px;
-    margin-bottom: 40px;
-  }
-  .cities-lists {
-    gap: 24px;
-  }
-  .cities-list {
-    width: 31%;
-  }
-  .card-title {
-    font-size: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 24px;
-    border: 1px solid #00000020;
-  }
-  .card-detail {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 24px;
-    border: 1px solid #00000020;
-    .material-symbols-outlined {
-      font-size: 18px;
-      margin-right: 11px;
-    }
-  }
-  .btn {
-    width: 100%;
-    margin: 0 auto;
-    background-color: $dark;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    a {
-      font-size: 19px;
-      line-height: 1.4;
-      color: $white;
-      &:hover {
-        background-color: lighten($dark, 40%);
-      }
-    }
-  }
-  .container {
-    padding-top: 96px;
-    padding-bottom: 80px;
-  }
+// .storelocations {
+//   .stores-location-title {
+//     font-family: $font-noto;
+//     font-size: $h2-font-size;
+//     font-weight: 900;
+//     margin-bottom: 32px;
+//     padding-left: 16px;
+//     border-left: 8px solid $border-left;
+//   }
+//   .cities-ops {
+//     font-size: $h4-font-size;
+//     line-height: 36px;
+//     font-weight: 400;
+//     margin-right: 16px;
+//   }
+//   .selection {
+//     width: 304px;
+//     height: 38px;
+//     border: 1px solid #ced4da;
+//     padding-top: 6px;
+//     padding-bottom: 6px;
+//     padding-left: 12px;
+//     margin-bottom: 40px;
+//   }
+//   .cities-lists {
+//     gap: 24px;
+//   }
+//   .cities-list {
+//     width: 31%;
+//   }
+//   .card-title {
+//     font-size: 24px;
+//     padding-top: 8px;
+//     padding-bottom: 8px;
+//     padding-left: 24px;
+//     border: 1px solid #00000020;
+//   }
+//   .card-detail {
+//     padding-top: 16px;
+//     padding-bottom: 16px;
+//     padding-left: 24px;
+//     border: 1px solid #00000020;
+//     .material-symbols-outlined {
+//       font-size: 18px;
+//       margin-right: 11px;
+//     }
+//   }
+//   .btn {
+//     width: 100%;
+//     margin: 0 auto;
+//     background-color: $dark;
+//     padding-top: 16px;
+//     padding-bottom: 16px;
+//     a {
+//       font-size: 19px;
+//       line-height: 1.4;
+//       color: $white;
+//       &:hover {
+//         background-color: lighten($dark, 40%);
+//       }
+//     }
+//   }
+//   .container {
+//     padding-top: 96px;
+//     padding-bottom: 80px;
+//   }
 
-  @include pad {
-    .cities-list {
-      width: 41%;
-    }
-    .container {
-      padding-top: 80px;
-      padding-bottom: 80px;
-    }
-  }
+//   @include pad {
+//     .cities-list {
+//       width: 41%;
+//     }
+//     .container {
+//       padding-top: 80px;
+//       padding-bottom: 80px;
+//     }
+//   }
 
-  @include mobile {
-    .stores-location-title {
-      font-size: $h4-font-size;
-      margin-bottom: 24px;
-    }
-    .cities-ops {
-      font-size: $font-size-base;
-      line-height: 1.5;
-      margin-right: 8px;
-    }
-    .selection {
-      width: 276px;
-      margin-bottom: 24px;
-    }
-    .cities-list {
-      width: 100%;
-    }
-    .container {
-      padding-top: 40px;
-      padding-bottom: 64px;
-    }
-  }
-}
+//   @include mobile {
+//     .stores-location-title {
+//       font-size: $h4-font-size;
+//       margin-bottom: 24px;
+//     }
+//     .cities-ops {
+//       font-size: $font-size-base;
+//       line-height: 1.5;
+//       margin-right: 8px;
+//     }
+//     .selection {
+//       width: 276px;
+//       margin-bottom: 24px;
+//     }
+//     .cities-list {
+//       width: 100%;
+//     }
+//     .container {
+//       padding-top: 40px;
+//       padding-bottom: 64px;
+//     }
+//   }
+// }

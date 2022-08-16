@@ -38,12 +38,12 @@ banner 區塊設定
       }
     }
   }
-  @include pad {
+  @include respond(ipad-portrait) {
     background: url(../images/home-header-sm.png) no-repeat;
     background-size: cover;
   }
 
-  @include mobile {
+  @include respond(mobile) {
     .ad-area {
       font-size: $font-size-base;
 
@@ -107,7 +107,7 @@ section feature 區塊區塊設定
     text-align: left;
   }
 
-  @include pad {
+  @include respond(ipad-portrait) {
     .feature-lists {
       flex-wrap: wrap;
     }
@@ -117,7 +117,7 @@ section feature 區塊區塊設定
     }
   }
 
-  @include mobile {
+  @include respond(mobile) {
     .container {
       padding-top: 40px;
       padding-bottom: 40px;
@@ -176,14 +176,14 @@ section classic 區塊設定
     padding-bottom: 80px;
   }
 
-  @include pad {
+  @include respond(ipad-portrait) {
     .list-icon {
       width: 336px;
       height: 336px;
     }
   }
 
-  @include mobile {
+  @include respond(mobile) {
     &-title {
       font-size: $h4-font-size;
       margin-bottom: 24px;
@@ -249,7 +249,7 @@ section classic 區塊設定
     padding-bottom: 80px;
   }
 
-  @include pad {
+  @include respond(ipad-portrait) {
     background: url(../images/index-bg-sm.png) no-repeat;
     background-position: left top;
     &-lists {
@@ -266,7 +266,7 @@ section classic 區塊設定
     }
   }
 
-  @include mobile {
+  @include respond(mobile) {
     background: url(../images/index-bg-md.png) no-repeat;
 
     &-title {
@@ -338,7 +338,7 @@ section classic 區塊設定
     padding-bottom: 80px;
   }
 
-  @include pad {
+  @include respond(ipad-portrait) {
     &-lists {
       flex-wrap: wrap;
       &_item {
@@ -347,7 +347,7 @@ section classic 區塊設定
     }
   }
 
-  @include mobile {
+  @include respond(mobile) {
     &-title {
       font-size: $h4-font-size;
       margin-bottom: 24px;
@@ -423,7 +423,7 @@ section classic 區塊設定
     font-weight: 900;
     color: $white;
     background-color: $primary;
-    padding: 14px 174px;
+    // padding: 14px 174px;
     &:hover {
       @extend %btn-hover;
     }
@@ -437,7 +437,7 @@ section classic 區塊設定
     padding-bottom: 80px;
   }
 
-  @include pad {
+  @include respond(ipad-portrait) {
     &-title {
       margin-bottom: 24px;
     }
@@ -446,20 +446,20 @@ section classic 區塊設定
       max-width: 576px;
     }
 
-    @include mobile {
+    @include respond(mobile) {
       &-title {
         font-size: $h4-font-size;
       }
 
-      &-form {
-        min-width: 348px;
-      }
+      // &-form {
+      //   min-width: 348px;
+      // }
       .agree-box {
         margin-bottom: 24px;
       }
-      .btn {
-        width: 100%;
-      }
+      // .btn {
+      //   width: 100%;
+      // }
       .container {
         padding-top: 40px;
         padding-bottom: 40px;

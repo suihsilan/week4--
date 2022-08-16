@@ -29,23 +29,31 @@ $white: #fff;
 $border-left: #9f1213;
 $hover: yellowgreen; ///在設定
 
-//space
+//space---4的倍數
 $space: 1rem; //16px
 
 $space-1: $space * 0.25; //4px
 $space-2: $space * 0.5; //8px
-$space-3: $space * 0.625; //10px
+$space-3: $space * 0.75; //12px
 $space-4: $space; //16px
 $space-5: $space * 1.25; //20px
 $space-6: $space * 1.5; //24px
 $space-7: $space * 1.75; //28px
-$space-8: $space * 1.875; //30px
-$space-9: $space * 2; //32px
-$space-10: $space * 2.25; //36px
-$space-11: $space * 2.5; //40px
+$space-8: $space * 2; //32px
+$space-9: $space * 2.25; //36px
+$space-10: $space * 2.5; //40px
+$space-11: $space * 2.75; //44px
 $space-12: $space * 3; //48px;
-$space-13: $space * 3.75; //60px
-$space-14: $space * 4; //64px
-$space-15: $space * 4.875; //78px
-$space-16: $space * 5; //80px
-$space-17: $space * 5.5; //88px
+$space-13: $space * 3.25; //52px
+$space-14: $space * 3.5; //56px
+$space-15: $space * 3.75; //60px
+$space-16: $space * 4; //64px
+$space-17: $space * 4.25; //68px
+$space-18: $space * 4.5; //72px
+$space-19: $space * 4.75; //76px
+$space-20: $space * 5; //80px
+$space-21: $space * 5.25; //84px
+$space-22: $space * 5.5; //88px
+$space-23: $space * 5.75; //92px
+$space-24: $space * 6; //96px
+$space-25: $space * 6.25; //100px

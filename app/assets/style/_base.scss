@@ -27,10 +27,15 @@ a {
 }
 
 body {
-  font-family: $font-noto, $font-roboto;
+  font-family: $font-roboto, $font-noto;
+  font-weight: 400; //regular
   font-size: $font-size-base; //16px
   line-height: 1.5; //24px
   color: $dark;
+}
+/*-----layout主色系設定------*/
+.bg--primary {
+  background-color: $primary;
 }
 
 /*------文字置中設定-----*/
@@ -114,4 +119,20 @@ h5,
   align-items: baseline;
 }
 
-/*-------其他通用設定-----------*/
+/*-------flex:gap設定----------*/
+//16px的倍數
+.gap-1 {
+  gap: $space;
+}
+
+.gap-2 {
+  gap: $space * 2;
+}
+
+.gap-3 {
+  gap: $space * 3;
+}
+
+.gap-4 {
+  gap: $space * 4;
+}

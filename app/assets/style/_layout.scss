@@ -1,245 +1,194 @@
 /*----------
-***************
-header 區塊設定 可以在另外寫：hide-text + :hover狀態 >>mixin
-***************
+header 區塊設定 
 ------------*/
 .header {
-  background-color: $primary;
-
-  .nav {
-    //這裡padding不要合在一起寫，權重+20，導致container的paddingl/r吃不到
-    padding-top: 15.575px;
-    padding-bottom: 15.575px;
-
-    .logo {
-      width: 80px;
-      height: 48.57px;
-      background: url(../images/logo-white.png) no-repeat;
-      background-size: cover; //讓背景圖「不變形」、「寬高等比例」、「在必要時局部裁切」鋪滿整個容器空間
-      text-indent: 101%; //圖片取代文字
-      white-space: nowrap;
-      overflow: hidden;
-    }
+  .headerInner {
+    padding-top: $space-4; //4的倍數
+    padding-bottom: $space-4;
   }
-
-  .navbar {
-    gap: 64px;
-
-    &-link {
-      font-size: $h5-font-size; //20px
-      line-height: 1.5; //30px
-      color: $white;
-
-      &:hover {
-        @extend %btn-hover;
-      }
-    }
+  .logo {
+    width: 80px;
+    height: 48px;
+    background: url(../images/logo-white.png) no-repeat;
+    background-size: cover;
+    @include hide-text;
   }
-
-  @include mobile {
-    //rwd 手機斷點設定
-    .nav {
+  @include respond(ipad-portrait) {
+    //header用767作斷點
+    .headerInner {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding-bottom: 0;
-
-      .logo {
-        max-width: 100%;
-        margin-bottom: 15.715px;
-      }
     }
-
-    .navbar {
-      gap: 0px;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-
-      &-list {
-        margin: 0;
-        width: 50%; //兩欄
-        border: 1px solid $white;
-      }
-
-      &-link {
-        display: block;
-        font-size: $font-size-base; //16px
-        line-height: 1.5; //24px
-
-        &:hover {
-          background: lighten($primary, 30%); //將紅色調亮30%;
-          border-radius: 30%;
-          transition: 0.3s;
-        }
-      }
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .logo {
+      max-width: 100%;
+      margin-bottom: $space-4;
     }
   }
 }
-
+.menu {
+  &__link {
+    font-size: $h5-font-size; //20px
+    color: $white;
+    &:hover {
+      @extend %btn-hover;
+    }
+  }
+  @include respond(ipad-portrait) {
+    gap: 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    &__item {
+      margin: 0;
+      width: 50%; //兩欄
+      outline: 1px solid $white;
+    }
+    &__link {
+      display: block;
+      font-size: $font-size-base; //16px
+      padding-top: $space-3;
+      padding-bottom: $space-3;
+    }
+  }
+  @include respond(mobile) {
+    &__link {
+      font-size: $font-size-sm; //14px
+      padding-top: $space-1;
+      padding-bottom: $space-1;
+    }
+  }
+}
 /*----------
-***************
 footer 區塊設定
-***************
 ------------*/
-
-.footer {
-  background: $primary;
-
-  .contacts-area {
-    padding-top: 60.02px; //$space-12
-
-    .menu-lists {
-      gap: $space-12; //48px
-
-      .menu-link {
-        font-family: $font-noto;
-        font-weight: 400;
-        font-size: $font-size-base;
-        line-height: 1.5;
+.footerInner {
+  padding-top: $space-15;
+  .footer-note {
+    .f-menu {
+      &__link {
         color: $white;
         padding: $space-1 0;
-
         &:hover {
           @extend %btn-hover;
         }
       }
     }
   }
-
-  .hotline-lists {
-    padding-top: 35.98px;
-
-    .contacts-link {
+  .hotline {
+    padding-top: $space-9;
+    &__link {
       color: $white;
       font-size: $h3-font-size; //36px
       line-height: 1.5;
-
       &:hover {
         @extend %btn-hover;
       }
-
       .material-symbols-outlined {
         font-size: 36px;
         margin-right: 22px;
       }
     }
   }
-
-  .media-lists {
-    gap: 32px;
-
-    .media-link {
-      .media-logo {
-        width: 48px;
-        height: 48px;
+  @include respond(ipad-landscape) {
+    .hotline {
+      padding-top: $space-8;
+    }
+  }
+  @include respond(ipad-portrait) {
+    padding-top: $space-16; //60px
+    .f-menu {
+      gap: $space-6;
+    }
+    .hotline {
+      padding-top: $space-10;
+      &__link {
+        font-size: $h4-font-size;
+        .material-symbols-outlined {
+          font-size: 28px;
+          margin-right: 11px;
+        }
       }
+    }
+  }
+  @include respond(mobile) {
+    padding-top: $space-6; //24px
+    .footer-note {
+      .f-menu {
+        display: none;
+      }
+    }
+    .hotline {
+      padding-top: 0px;
+      &__link {
+        font-size: $font-size-base; //16px
+        .material-symbols-outlined {
+          font-size: 20px;
+          margin-right: 11px;
+        }
+      }
+    }
+  }
+}
+.media-lists {
+  &__link {
+    &:hover {
+      @extend %btn-hover;
+    }
+  }
+  &__icon {
+    width: 48px;
+  }
+  @include respond(ipad-landscape) {
+    gap: $space-4;
+    &__icon {
+      width: 40px;
+    }
+  }
+  @include respond(mobile) {
+    gap: $space-2;
+    &__icon {
+      width: 24px;
+    }
+  }
+}
+.copyrightInner {
+  margin-top: $space-8;
+  padding-top: $space-8;
+  padding-bottom: $space-8;
+  border-top: 1px solid $white;
+  .copyright-note {
+    color: $white;
+  }
+  .policy {
+    gap: $space-12; //48px
+    &__link {
+      color: $white;
+      font-size: $font-size-sm;
       &:hover {
         @extend %btn-hover;
       }
     }
   }
-
-  .copyright-area {
-    margin-top: 31px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    border-top: 1px solid $white;
-
-    .copyright-claim {
-      color: $white;
+  @include respond(mobile) {
+    margin-top: $space-6; //24px
+    padding-top: $space-4;
+    padding-bottom: $space-6;
+    .copyright-note {
+      width: 100%;
+      margin-bottom: $space-2;
     }
-
     .policy {
-      gap: $space-12; //48px
-
-      .policy-link {
-        color: $white;
-        font-size: $font-size-sm;
-        line-height: 1.5;
-
-        &:hover {
-          @extend %btn-hover;
-        }
-      }
-    }
-  }
-
-  @include pad {
-    .contacts-area {
-      padding-top: 56.02px;
-    }
-
-    .hotline-lists {
-      padding-top: 31.98px;
-    }
-
-    .media-lists {
-      gap: 16px;
-
-      .media-link {
-        .media-logo {
-          width: 40px;
-          height: 40px;
-        }
-      }
-    }
-  }
-  @include mobile {
-    .contacts-area {
-      padding-top: 24px;
-    }
-
-    .menu-lists {
-      display: none;
-    }
-
-    .hotline-lists {
-      padding-top: 0px;
-
-      .phone {
-        margin-bottom: 8px;
-      }
-
-      .contacts-link {
-        font-size: $font-size-base; //16px
-
-        .material-symbols-outlined {
-          font-size: 18px;
-          margin-right: 11px;
-        }
-      }
-    }
-
-    .media-lists {
-      gap: 8px;
-
-      .media-link {
-        .media-logo {
-          width: 24px;
-          height: 24px;
-        }
-      }
-    }
-
-    .copyright-area {
-      margin-top: 23px; //24px
-      padding-top: 16px;
-      padding-bottom: 24px;
-
-      .copyright-claim {
+      gap: $space-2;
+      &__item {
         width: 100%;
-        margin-bottom: 8px;
-      }
-
-      .policy {
-        gap: 8px;
-
-        .policy-list {
-          width: 100%;
-          .policy-link {
-            font-size: $font-size-base;
-          }
+        &__link {
+          font-size: $font-size-base;
         }
       }
     }
