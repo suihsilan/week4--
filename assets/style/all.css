@@ -9,12 +9,15 @@
   padding-right: 12px; }
   @media (max-width: 992px) {
     .container {
-      max-width: 720px; } }
+      max-width: 960px; } }
   @media (max-width: 767px) {
     .container {
-      max-width: 372px; } }
+      max-width: 720px; } }
+  @media (max-width: 576px) {
+    .container {
+      max-width: 540px; } }
 
-.header .navbar-link:hover, .footer .contacts-area .menu-lists .menu-link:hover, .footer .hotline-lists .contacts-link:hover, .footer .media-lists .media-link:hover, .footer .copyright-area .policy .policy-link:hover, .banner .ad-area .buy-link:hover, .response .btn:hover {
+.menu__link:hover, .footerInner .footer-note .f-menu__link:hover, .footerInner .hotline__link:hover, .media-lists__link:hover, .copyrightInner .policy__link:hover, .banner-note__link:hover, .response .btn:hover {
   background: #fe4c46;
   border-radius: 30%;
   -webkit-transition: 0.3s;
@@ -172,10 +175,18 @@ a {
   padding-right: 12px; }
 
 body {
-  font-family: "Noto Sans TC", sans-serif, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif, "Noto Sans TC", sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
   color: #000; }
+
+/*-----layout主色系設定------*/
+.bg--primary {
+  background-color: #aa0601; }
+
+.bg--secondary {
+  background-color: #fbf2f2; }
 
 /*------文字置中設定-----*/
 .text-center {
@@ -259,163 +270,179 @@ h5,
       -ms-flex-align: baseline;
           align-items: baseline; }
 
-/*-------其他通用設定-----------*/
-/*----------
-***************
-header 區塊設定 可以在另外寫：hide-text + :hover狀態 >>mixin
-***************
-------------*/
-.header {
-  background-color: #aa0601; }
-  .header .nav {
-    padding-top: 15.575px;
-    padding-bottom: 15.575px; }
-    .header .nav .logo {
-      width: 80px;
-      height: 48.57px;
-      background: url(../images/logo-white.png) no-repeat;
-      background-size: cover;
-      text-indent: 101%;
-      white-space: nowrap;
-      overflow: hidden; }
-  .header .navbar {
-    gap: 64px; }
-    .header .navbar-link {
-      font-size: 1.25rem;
-      line-height: 1.5;
-      color: #fff; }
-  @media (max-width: 767px) {
-    .header .nav {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      padding-bottom: 0; }
-      .header .nav .logo {
-        max-width: 100%;
-        margin-bottom: 15.715px; }
-    .header .navbar {
-      gap: 0px;
-      width: 100%;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      .header .navbar-list {
-        margin: 0;
-        width: 50%;
-        border: 1px solid #fff; }
-      .header .navbar-link {
-        display: block;
-        font-size: 1rem;
-        line-height: 1.5; }
-        .header .navbar-link:hover {
-          background: #fe4c46;
-          border-radius: 30%;
-          -webkit-transition: 0.3s;
-          -o-transition: 0.3s;
-          transition: 0.3s; } }
+/*-------flex:gap設定----------*/
+.gap-1 {
+  gap: 1rem; }
+
+.gap-2 {
+  gap: 2rem; }
+
+.gap-3 {
+  gap: 3rem; }
+
+.gap-4 {
+  gap: 4rem; }
+
+/*-------padding設定----------*/
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
 
 /*----------
-***************
-footer 區塊設定
-***************
+header 區塊設定 
 ------------*/
-.footer {
-  background: #aa0601; }
-  .footer .contacts-area {
-    padding-top: 60.02px; }
-    .footer .contacts-area .menu-lists {
-      gap: 3rem; }
-      .footer .contacts-area .menu-lists .menu-link {
-        font-family: "Noto Sans TC", sans-serif;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.5;
-        color: #fff;
-        padding: 0.25rem 0; }
-  .footer .hotline-lists {
-    padding-top: 35.98px; }
-    .footer .hotline-lists .contacts-link {
+.header .headerInner {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.header .logo {
+  width: 80px;
+  height: 48px;
+  background: url(../images/logo-white.png) no-repeat;
+  background-size: cover;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+@media (max-width: 767px) {
+  .header .headerInner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 0; }
+  .header .container {
+    padding-right: 0;
+    padding-left: 0; }
+  .header .logo {
+    max-width: 100%;
+    margin-bottom: 1rem; } }
+
+.menu__link {
+  font-size: 1.25rem;
+  color: #fff; }
+
+@media (max-width: 767px) {
+  .menu {
+    gap: 0px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .menu__item {
+      margin: 0;
+      width: 50%;
+      outline: 1px solid #fff; }
+    .menu__link {
+      display: block;
+      font-size: 1rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem; } }
+
+@media (max-width: 576px) {
+  .menu__link {
+    font-size: 0.875rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem; } }
+
+/*----------
+footer 區塊設定
+------------*/
+.footerInner {
+  padding-top: 3.75rem; }
+  .footerInner .footer-note .f-menu__link {
+    color: #fff;
+    padding: 0.25rem 0; }
+  .footerInner .hotline {
+    padding-top: 2.25rem; }
+    .footerInner .hotline__link {
       color: #fff;
       font-size: 2.25rem;
       line-height: 1.5; }
-      .footer .hotline-lists .contacts-link .material-symbols-outlined {
+      .footerInner .hotline__link .material-symbols-outlined {
         font-size: 36px;
         margin-right: 22px; }
-  .footer .media-lists {
-    gap: 32px; }
-    .footer .media-lists .media-link .media-logo {
-      width: 48px;
-      height: 48px; }
-  .footer .copyright-area {
-    margin-top: 31px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    border-top: 1px solid #fff; }
-    .footer .copyright-area .copyright-claim {
-      color: #fff; }
-    .footer .copyright-area .policy {
-      gap: 3rem; }
-      .footer .copyright-area .policy .policy-link {
-        color: #fff;
-        font-size: 0.875rem;
-        line-height: 1.5; }
   @media (max-width: 992px) {
-    .footer .contacts-area {
-      padding-top: 56.02px; }
-    .footer .hotline-lists {
-      padding-top: 31.98px; }
-    .footer .media-lists {
-      gap: 16px; }
-      .footer .media-lists .media-link .media-logo {
-        width: 40px;
-        height: 40px; } }
+    .footerInner .hotline {
+      padding-top: 2rem; } }
   @media (max-width: 767px) {
-    .footer .contacts-area {
-      padding-top: 24px; }
-    .footer .menu-lists {
-      display: none; }
-    .footer .hotline-lists {
-      padding-top: 0px; }
-      .footer .hotline-lists .phone {
-        margin-bottom: 8px; }
-      .footer .hotline-lists .contacts-link {
-        font-size: 1rem; }
-        .footer .hotline-lists .contacts-link .material-symbols-outlined {
-          font-size: 18px;
-          margin-right: 11px; }
-    .footer .media-lists {
-      gap: 8px; }
-      .footer .media-lists .media-link .media-logo {
-        width: 24px;
-        height: 24px; }
-    .footer .copyright-area {
-      margin-top: 23px;
-      padding-top: 16px;
-      padding-bottom: 24px; }
-      .footer .copyright-area .copyright-claim {
+    .footerInner {
+      padding-top: 4rem; }
+      .footerInner .f-menu {
+        gap: 1.5rem; }
+      .footerInner .hotline {
+        padding-top: 2.5rem; }
+        .footerInner .hotline__link {
+          font-size: 1.5rem; }
+          .footerInner .hotline__link .material-symbols-outlined {
+            font-size: 28px;
+            margin-right: 11px; } }
+  @media (max-width: 576px) {
+    .footerInner {
+      padding-top: 1.5rem; }
+      .footerInner .footer-note .f-menu {
+        display: none; }
+      .footerInner .hotline {
+        padding-top: 0px; }
+        .footerInner .hotline__link {
+          font-size: 1rem; }
+          .footerInner .hotline__link .material-symbols-outlined {
+            font-size: 20px;
+            margin-right: 11px; } }
+
+.media-lists__icon {
+  width: 48px; }
+
+@media (max-width: 992px) {
+  .media-lists {
+    gap: 1rem; }
+    .media-lists__icon {
+      width: 40px; } }
+
+@media (max-width: 576px) {
+  .media-lists {
+    gap: 0.5rem; }
+    .media-lists__icon {
+      width: 24px; } }
+
+.copyrightInner {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #fff; }
+  .copyrightInner .copyright-note {
+    color: #fff; }
+  .copyrightInner .policy {
+    gap: 3rem; }
+    .copyrightInner .policy__link {
+      color: #fff;
+      font-size: 0.875rem; }
+  @media (max-width: 576px) {
+    .copyrightInner {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1.5rem; }
+      .copyrightInner .copyright-note {
         width: 100%;
-        margin-bottom: 8px; }
-      .footer .copyright-area .policy {
-        gap: 8px; }
-        .footer .copyright-area .policy .policy-list {
+        margin-bottom: 0.5rem; }
+      .copyrightInner .policy {
+        gap: 0.5rem; }
+        .copyrightInner .policy__item {
           width: 100%; }
-          .footer .copyright-area .policy .policy-list .policy-link {
+          .copyrightInner .policy__item__link {
             font-size: 1rem; } }
 
 /*----------
-***************
 banner 區塊設定
-***************
 ------------*/
 .banner {
   max-width: 100%;
@@ -424,80 +451,65 @@ banner 區塊設定
   background-position: center center;
   background-size: cover; }
   .banner .container {
-    height: 100%; }
-  .banner .ad-area {
-    font-family: "Noto Sans TC", sans-serif;
+    min-height: 100%; }
+  .banner-note {
     font-size: 2.25rem;
     color: #650300; }
-    .banner .ad-area .title {
+    .banner-note__title {
       font-size: 4rem;
       font-weight: bold; }
-    .banner .ad-area .buy-link {
+    .banner-note__link {
       display: inline-block;
       font-size: 1.25rem;
-      background-color: #aa0601;
       color: #fff;
-      padding: 6px 12px;
-      margin-top: 4px; }
-  @media (max-width: 992px) {
+      padding: 0.375rem 0.75rem;
+      margin-top: 0.25rem; }
+  @media (max-width: 767px) {
+    .banner-note {
+      font-size: 1.5rem; }
+      .banner-note__title {
+        font-size: 3rem; } }
+  @media (max-width: 576px) {
     .banner {
       background: url(../images/home-header-sm.png) no-repeat;
-      background-size: cover; } }
-  @media (max-width: 767px) {
-    .banner .ad-area {
-      font-size: 1rem; }
-      .banner .ad-area .title {
-        font-size: 1.5rem; } }
+      background-position: center center;
+      background-size: cover;
+      height: 396px; }
+      .banner-note {
+        font-size: 1rem; }
+        .banner-note__title {
+          font-size: 1.5rem; } }
 
 /*----------
-***************
-section feature 區塊區塊設定 
-須在重構一下icon的大小
-***************
+section--service 區塊設定 
 ------------*/
-.feature {
-  font-family: "Noto Sans TC", sans-serif;
+.service {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #650300;
-  background: #fbf2f2; }
-  .feature .container {
-    padding-top: 80px;
-    padding-bottom: 80px; }
-  .feature .feature-title {
+  color: #650300; }
+  .service__title {
     font-size: 3rem;
     margin-bottom: 32.08px; }
-  .feature .feature-lists {
-    width: 100%;
-    gap: 24px; }
-  .feature .feature-item {
-    width: 25%; }
-  .feature .item-img {
-    width: 83.83px;
-    height: 83.83px;
-    margin-bottom: 24.33px; }
-  .feature .item-icon {
-    margin-bottom: 8px; }
-  .feature .item-title {
-    font-size: 1.5rem; }
-  .feature .item-text {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #000;
-    text-align: left; }
-  @media (max-width: 992px) {
-    .feature .feature-lists {
+  @media (max-width: 576px) {
+    .service .container {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem; }
+    .service .service__title {
+      font-size: 1.5rem; } }
+
+.feature {
+  width: 100%;
+  gap: 1.5rem; }
+  .feature__item {
+    width: 24%; }
+  @media (max-width: 767px) {
+    .feature {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-    .feature .feature-item {
-      width: 47%; } }
-  @media (max-width: 767px) {
-    .feature .container {
-      padding-top: 40px;
-      padding-bottom: 40px; }
-    .feature .feature-title {
-      font-size: 1.5rem; }
-    .feature .feature-lists {
+      .feature__item {
+        width: 47%; } }
+  @media (max-width: 767px) and (max-width: 576px) {
+    .feature {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -511,20 +523,32 @@ section feature 區塊區塊設定
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; } }
+  .feature .feature-note {
+    margin-bottom: 0.5rem; }
+    .feature .feature-note__icon {
+      width: 84px;
+      margin-bottom: 1.5rem; }
+    .feature .feature-note__title {
+      font-size: 1.5rem; }
+    .feature .feature-note__text {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #000; }
 
 /*----------
-***************
-section classic 區塊設定 
-***************
+section series >區塊設定 
 ------------*/
-.classic-title {
-  font-family: "Noto Sans TC", sans-serif;
+.series__title {
   font-size: 3rem;
   font-weight: bold;
   color: #650300;
-  margin-bottom: 48px; }
+  margin-bottom: 3rem; }
 
-.classic-lists {
+@media (max-width: 576px) {
+  .series__title {
+    font-size: 1.5rem; } }
+
+.classic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,421 +560,192 @@ section classic 區塊設定
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 24px; }
-  .classic-lists .list-icon {
+  gap: 1.5rem; }
+  .classic__icon {
     width: 416px;
-    height: 416px;
-    margin-bottom: 8px; }
-  .classic-lists .list-name {
-    font-family: "Roboto", sans-serif;
+    margin-bottom: 0.5rem; }
+  .classic__title {
     font-size: 3rem;
     font-weight: 900;
     font-style: italic;
-    color: #aa0601;
-    text-align: center; }
-
-.classic .container {
-  padding-top: 80px;
-  padding-bottom: 80px; }
-
-@media (max-width: 992px) {
-  .classic .list-icon {
-    width: 336px;
-    height: 336px; } }
-
-@media (max-width: 767px) {
-  .classic-title {
-    font-size: 1.5rem;
-    margin-bottom: 24px; }
-  .classic .list-icon {
-    width: 348px;
-    height: 348px; }
-  .classic .container {
-    padding-top: 40px;
-    padding-bottom: 40px; } }
+    color: #aa0601; }
+  @media (max-width: 767px) {
+    .classic__icon {
+      width: 336px; } }
+  @media (max-width: 576px) {
+    .classic__title {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem; }
+    .classic__icon {
+      width: 348px; } }
 
 /*----------
-***************
- section--union 區塊區塊設定 
-***************b
-------------*/
-.union {
+ section--collaboration 區塊區塊設定 
+-----------*/
+.collaboration {
   background: url(../images/index-bg.png) no-repeat;
   background-position: center center;
   background-size: cover; }
-  .union-title {
-    font-family: "Noto Sans TC", sans-serif;
+  .collaboration__title {
     font-size: 3rem;
-    line-height: 1.5;
     font-weight: bold;
     color: #fff;
-    margin-bottom: 48px; }
-  .union-lists .union-img {
-    width: 648px;
-    height: 240px; }
-  .union-lists .union-img-sm {
-    display: none;
-    width: 348px;
-    height: 240px; }
-  .union-lists .list-name {
-    font-family: "Roboto", sans-serif;
+    margin-bottom: 3rem; }
+  .collaboration .crossover__img--sm {
+    display: none; }
+  .collaboration .crossover__title {
     font-size: 3rem;
-    line-height: 1.5;
     font-weight: 900;
     font-style: italic;
     color: #aa0601;
-    text-align: center;
     background-color: #fff;
-    padding-top: 8px;
-    padding-bottom: 8px; }
-  .union .container {
-    padding-top: 80px;
-    padding-bottom: 80px; }
-  @media (max-width: 992px) {
-    .union {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+  @media (max-width: 767px) {
+    .collaboration {
       background: url(../images/index-bg-sm.png) no-repeat;
       background-position: left top; }
-      .union-lists {
+      .collaboration .crossover {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-        gap: 24px;
+        gap: 1.5rem;
         width: 100%; }
-        .union-lists-item {
-          width: 50%; }
-        .union-lists .union-img {
-          width: 696px; } }
-  @media (max-width: 767px) {
-    .union {
+        .collaboration .crossover__item {
+          width: 50%; } }
+  @media (max-width: 576px) {
+    .collaboration {
       background: url(../images/index-bg-md.png) no-repeat; }
-      .union-title {
+      .collaboration .container {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem; }
+      .collaboration__title {
         font-size: 1.5rem;
-        margin-bottom: 24px; }
-      .union-lists .union-img {
+        margin-bottom: 1.5rem; }
+      .collaboration .crossover__img {
         display: none; }
-      .union-lists .union-img-sm {
+      .collaboration .crossover__img--sm {
         display: inline-block; }
-      .union .container {
-        padding-top: 40px;
-        padding-bottom: 40px; } }
+      .collaboration .crossover__title {
+        font-size: 1.5rem; } }
 
 /*----------
-***************
  section--review  區塊區塊設定 
-***************b
 ------------*/
-.review-title {
-  font-family: "Noto Sans TC", sans-serif;
+.review__title {
   font-size: 3rem;
   color: #650300;
   font-weight: bold;
-  margin-bottom: 48px; }
+  margin-bottom: 3rem; }
 
-.review-lists {
-  gap: 24px; }
-  .review-lists_item {
-    width: 25%;
+.review .customer-card {
+  width: 100%;
+  gap: 1.5rem;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+  .review .customer-card__item {
+    width: 23%;
     border-radius: 4px; }
-  .review-lists-img {
+  .review .customer-card__img {
     -o-object-fit: cover;
        object-fit: cover; }
 
-.review-content {
+.review .customer-note {
   -webkit-box-shadow: 0px 2px 6px #00000029;
           box-shadow: 0px 2px 6px #00000029;
-  padding: 16px; }
-  .review-content span {
+  padding: 1rem; }
+  .review .customer-note h4 {
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 8px; }
-  .review-content p {
+    margin-bottom: 0.5rem; }
+  .review .customer-note__text {
     font-weight: 400;
-    padding-bottom: 72px; }
-  .review-content small {
-    font-size: 14px;
+    padding-bottom: 4rem; }
+  .review .customer-note small {
+    font-size: 0.875rem;
     color: #707070; }
 
-.review .container {
-  padding-top: 80px;
-  padding-bottom: 80px; }
-
-@media (max-width: 992px) {
-  .review-lists {
+@media (max-width: 767px) {
+  .review .customer-card {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-    .review-lists_item {
+    .review .customer-card__item {
       width: 48%; } }
 
-@media (max-width: 767px) {
-  .review-title {
-    font-size: 1.5rem;
-    margin-bottom: 24px; }
-  .review-lists {
-    gap: 16px; }
-    .review-lists_item {
-      width: 96%; }
+@media (max-width: 576px) {
   .review .container {
-    padding-top: 40px;
-    padding-bottom: 40px; } }
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem; }
+  .review__title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem; }
+  .review .customer-card {
+    gap: 1rem; }
+    .review .customer-card__item {
+      width: 96%; } }
 
 /*----------
-***************
  section--response  區塊區塊設定 
-***************
 ------------*/
-.response {
-  background-color: #fbf2f2; }
-  .response-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #650300;
-    margin-bottom: 48px; }
-  .response-form {
-    max-width: 636px;
-    margin: 0 auto; }
-  .response-description {
-    font-size: 1rem;
-    margin-bottom: 24px; }
-  .response .input-box {
-    margin-bottom: 16px; }
-    .response .input-box .form-control {
-      display: block;
-      width: 100%;
-      height: 36px;
-      margin-top: 8px;
-      padding-top: 6px;
-      padding-bottom: 6px;
-      padding-left: 12px; }
-  .response .message-textarea {
-    margin-bottom: 16px; }
-    .response .message-textarea .form-control {
-      resize: none;
-      height: 136px; }
-  .response .agree-box {
-    margin-bottom: 48px; }
-    .response .agree-box .agree-text {
-      width: 24px;
-      height: 24px;
-      margin-right: 4px;
-      border: 2px solid #000; }
-  .response .btn {
-    font-size: 1rem;
-    line-height: 24px;
-    font-weight: 900;
-    color: #fff;
-    background-color: #aa0601;
-    padding: 14px 174px; }
-    .response .btn:active {
-      background-color: #921e5c; }
-  .response .container {
-    padding-top: 80px;
-    padding-bottom: 80px; }
-  @media (max-width: 992px) {
-    .response-title {
-      margin-bottom: 24px; }
-    .response-form {
-      max-width: 576px; } }
+.response__title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #650300;
+  margin-bottom: 3rem; }
 
-@media (max-width: 992px) and (max-width: 767px) {
-  .response-title {
+.response-form {
+  width: 60%;
+  margin: 0 auto; }
+  .response-form__sub {
+    font-size: 1rem;
+    margin-bottom: 1.5rem; }
+
+.response .input-box {
+  margin-bottom: 1rem; }
+  .response .input-box__text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    margin-top: 0.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.75rem; }
+
+.response .message-textarea__text {
+  resize: none;
+  height: 136px; }
+
+.response .agree-box {
+  margin-bottom: 3rem; }
+  .response .agree-box__text {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.25rem;
+    border: 2px solid #000; }
+
+.response .btn {
+  display: block;
+  width: 60%;
+  font-weight: 700;
+  color: #fff;
+  padding: 0.75rem 0; }
+  .response .btn:active {
+    background-color: rgba(146, 30, 92, 0.6); }
+
+@media (max-width: 767px) {
+  .response__title {
+    margin-bottom: 1.5rem; }
+  .response-form {
+    max-width: 576px; } }
+
+@media (max-width: 576px) {
+  .response .container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem; }
+  .response__title {
     font-size: 1.5rem; }
-  .response-form {
-    min-width: 348px; }
   .response .agree-box {
-    margin-bottom: 24px; }
+    margin-bottom: 1.5rem; }
   .response .btn {
-    width: 100%; }
-  .response .container {
-    padding-top: 40px;
-    padding-bottom: 40px; } }
-
-.storelocations .stores-location-title {
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 32px;
-  padding-left: 16px;
-  border-left: 8px solid #9f1213; }
-
-.storelocations .cities-ops {
-  font-size: 1.5rem;
-  line-height: 36px;
-  font-weight: 400;
-  margin-right: 16px; }
-
-.storelocations .selection {
-  width: 304px;
-  height: 38px;
-  border: 1px solid #ced4da;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 12px;
-  margin-bottom: 40px; }
-
-.storelocations .cities-lists {
-  gap: 24px; }
-
-.storelocations .cities-list {
-  width: 31%; }
-
-.storelocations .card-title {
-  font-size: 24px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 24px;
-  border: 1px solid #00000020; }
-
-.storelocations .card-detail {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 24px;
-  border: 1px solid #00000020; }
-  .storelocations .card-detail .material-symbols-outlined {
-    font-size: 18px;
-    margin-right: 11px; }
-
-.storelocations .btn {
-  width: 100%;
-  margin: 0 auto;
-  background-color: #000;
-  padding-top: 16px;
-  padding-bottom: 16px; }
-  .storelocations .btn a {
-    font-size: 19px;
-    line-height: 1.4;
-    color: #fff; }
-    .storelocations .btn a:hover {
-      background-color: #666666; }
-
-.storelocations .container {
-  padding-top: 96px;
-  padding-bottom: 80px; }
-
-@media (max-width: 992px) {
-  .storelocations .cities-list {
-    width: 41%; }
-  .storelocations .container {
-    padding-top: 80px;
-    padding-bottom: 80px; } }
-
-@media (max-width: 767px) {
-  .storelocations .stores-location-title {
-    font-size: 1.5rem;
-    margin-bottom: 24px; }
-  .storelocations .cities-ops {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-right: 8px; }
-  .storelocations .selection {
-    width: 276px;
-    margin-bottom: 24px; }
-  .storelocations .cities-list {
-    width: 100%; }
-  .storelocations .container {
-    padding-top: 40px;
-    padding-bottom: 64px; } }
-
-.branchlocation .branch-location-title {
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 32px;
-  padding-left: 16px;
-  border-left: 8px solid #9f1213; }
-
-.branchlocation .branch-ops {
-  font-size: 1.5rem;
-  line-height: 36px;
-  font-weight: 400;
-  margin-right: 16px; }
-
-.branchlocation .b-selection {
-  width: 304px;
-  height: 38px;
-  border: 1px solid #ced4da;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 12px;
-  margin-bottom: 40px; }
-
-.branchlocation .branch-info .branch-lists {
-  width: 39%; }
-
-.branchlocation .branch-info .branch-map {
-  width: 59%; }
-
-.branchlocation .branch-card-title {
-  font-size: 1.5rem;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 24px;
-  border: 1px solid #00000020; }
-
-.branchlocation .select-cardbody {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 24px;
-  border: 1px solid #00000020; }
-  .branchlocation .select-cardbody .material-symbols-outlined {
-    font-size: 18px;
-    margin-right: 11px; }
-
-.branchlocation .container {
-  padding-top: 96px;
-  padding-bottom: 80px; }
-
-@media (max-width: 992px) {
-  .branchlocation .branch-info {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    .branchlocation .branch-info .branch-lists {
-      width: 100%;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      margin-bottom: 24px; }
-      .branchlocation .branch-info .branch-lists .branch-pic {
-        width: 43%; }
-      .branchlocation .branch-info .branch-lists .branch-card {
-        width: 55%; }
-    .branchlocation .branch-info .branch-map {
-      width: 100%;
-      height: 414px; }
-  .branchlocation .branch-lists {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .branchlocation .container {
-    padding-top: 80px;
-    padding-bottom: 80px; } }
-
-@media (max-width: 767px) {
-  .branchlocation .branch-location-title {
-    font-size: 1.5rem;
-    margin-bottom: 24px; }
-  .branchlocation .branch-ops {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-right: 8px; }
-  .branchlocation .branch-info .branch-lists {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    .branchlocation .branch-info .branch-lists .branch-pic {
-      width: 100%; }
-    .branchlocation .branch-info .branch-lists .branch-card {
-      width: 100%; }
-  .branchlocation .container {
-    padding-top: 40px;
-    padding-bottom: 64px; } }
+    width: 100%; } }
 
 /*# sourceMappingURL=all.css.map */
