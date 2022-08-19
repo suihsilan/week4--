@@ -38,6 +38,9 @@ body {
   background-color: $primary;
 }
 
+.bg--secondary {
+  background-color: $secondary;
+}
 /*------文字置中設定-----*/
 .text-center {
   text-align: center;
@@ -135,4 +138,11 @@ h5,
 
 .gap-4 {
   gap: $space * 4;
+}
+
+/*-------padding設定----------*/
+//4的倍數
+.py-20 {
+  padding-top: $space-20;
+  padding-bottom: $space-20;
 }

@@ -41,12 +41,6 @@
   }
 }
 
-//
-
-// @mixin hide-menu {
-//   display: none;
-// }
-
 //@extend 做樣式設定
 %btn-hover {
   background: lighten($primary, 30%); //將紅色調亮30%;

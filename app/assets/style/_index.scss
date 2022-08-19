@@ -1,469 +1,369 @@
 /*----------
-***************
 banner 區塊設定
-***************
 ------------*/
-
 .banner {
   max-width: 100%;
   height: 787px;
   background: url(../images/home-header.png) no-repeat;
   background-position: center center;
   background-size: cover;
-
   .container {
-    height: 100%; //內層的ad-area才有排板的依據
+    min-height: 100%; //內層的banner-note才有排板的依據
   }
-
-  .ad-area {
-    font-family: $font-noto;
+  &-note {
     font-size: $h3-font-size; //36px  lh: 1.5
     color: $danger;
-
-    .title {
+    &__title {
       font-size: $h1-font-size; //64px
       font-weight: bold;
     }
-
-    .buy-link {
+    &__link {
       display: inline-block;
       font-size: $h5-font-size;
-      background-color: $primary;
       color: $white;
-      padding: 6px 12px;
-      margin-top: 4px;
-
+      padding: $space-3/2 $space-3;
+      margin-top: $space-1;
       &:hover {
         @extend %btn-hover;
       }
     }
   }
   @include respond(ipad-portrait) {
-    background: url(../images/home-header-sm.png) no-repeat;
-    background-size: cover;
+    &-note {
+      font-size: $h4-font-size; //24px  lh: 1.5
+      &__title {
+        font-size: $h2-font-size; //64px
+      }
+    }
   }
-
   @include respond(mobile) {
-    .ad-area {
+    background: url(../images/home-header-sm.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 396px;
+    &-note {
       font-size: $font-size-base;
-
-      .title {
+      &__title {
         font-size: $h4-font-size;
       }
     }
   }
 }
-
 /*----------
-***************
-section feature 區塊區塊設定 
-須在重構一下icon的大小
-***************
+section--service 區塊設定 
 ------------*/
-.feature {
-  font-family: $font-noto;
+.service {
   font-size: $h4-font-size; //24px
   font-weight: bold;
   color: $danger;
-  background: $secondary;
-
-  .container {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  .feature-title {
+  &__title {
     font-size: $h2-font-size; //48px
     margin-bottom: 32.08px;
   }
-
-  .feature-lists {
-    width: 100%;
-    gap: 24px;
-  }
-
-  .feature-item {
-    width: 25%;
-  }
-
-  .item-img {
-    width: 83.83px;
-    height: 83.83px;
-    margin-bottom: 24.33px;
-  }
-
-  .item-icon {
-    margin-bottom: 8px;
-  }
-
-  .item-title {
-    font-size: $h4-font-size;
-  }
-
-  .item-text {
-    font-size: $font-size-base;
-    font-weight: 400;
-    color: $dark;
-    text-align: left;
-  }
-
-  @include respond(ipad-portrait) {
-    .feature-lists {
-      flex-wrap: wrap;
-    }
-
-    .feature-item {
-      width: 47%;
-    }
-  }
-
   @include respond(mobile) {
     .container {
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-top: $space-10;
+      padding-bottom: $space-10;
     }
-    .feature-title {
+    .service__title {
       font-size: $h4-font-size;
     }
-    .feature-lists {
+  }
+}
+
+.feature {
+  width: 100%;
+  gap: $space * 1.5;
+  &__item {
+    width: 24%;
+  }
+  @include respond(ipad-portrait) {
+    flex-wrap: wrap;
+    &__item {
+      width: 47%;
+    }
+    @include respond(mobile) {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   }
-}
 
+  .feature-note {
+    margin-bottom: $space-2;
+    &__icon {
+      width: 84px;
+      margin-bottom: $space-6;
+    }
+    &__title {
+      font-size: $h4-font-size;
+    }
+
+    &__text {
+      font-size: $font-size-base;
+      font-weight: 400;
+      color: $dark;
+    }
+  }
+}
 /*----------
-***************
-section classic 區塊設定 
-***************
+section series >區塊設定 
 ------------*/
-.classic {
-  &-title {
-    font-family: $font-noto;
+.series {
+  &__title {
     font-size: $h2-font-size;
     font-weight: bold;
     color: $danger;
-    margin-bottom: 48px;
+    margin-bottom: $space-12;
   }
-
-  &-lists {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
-
-    .list-icon {
-      width: 416px;
-      height: 416px;
-      margin-bottom: 8px;
-    }
-
-    .list-name {
-      font-family: $font-roboto;
-      font-size: $h2-font-size;
-      font-weight: 900;
-      font-style: italic;
-      color: $primary;
-      text-align: center;
-    }
-  }
-
-  .container {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  @include respond(ipad-portrait) {
-    .list-icon {
-      width: 336px;
-      height: 336px;
-    }
-  }
-
   @include respond(mobile) {
-    &-title {
+    &__title {
       font-size: $h4-font-size;
-      margin-bottom: 24px;
-    }
-
-    .list-icon {
-      width: 348px;
-      height: 348px;
-    }
-
-    .container {
-      padding-top: 40px;
-      padding-bottom: 40px;
     }
   }
 }
 
+.classic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $space * 1.5;
+
+  &__icon {
+    width: 416px;
+    margin-bottom: $space-2;
+  }
+
+  &__title {
+    font-size: $h2-font-size;
+    font-weight: 900;
+    font-style: italic;
+    color: $primary;
+  }
+  @include respond(ipad-portrait) {
+    &__icon {
+      width: 336px;
+    }
+  }
+  @include respond(mobile) {
+    &__title {
+      font-size: $h4-font-size;
+      margin-bottom: $space-6;
+    }
+    &__icon {
+      width: 348px;
+    }
+  }
+}
 /*----------
-***************
- section--union 區塊區塊設定 
-***************b
-------------*/
-.union {
+ section--collaboration 區塊區塊設定 
+-----------*/
+.collaboration {
   background: url(../images/index-bg.png) no-repeat;
   background-position: center center;
   background-size: cover;
-
-  &-title {
-    font-family: $font-noto;
+  &__title {
     font-size: $h2-font-size;
-    line-height: 1.5;
     font-weight: bold;
     color: $white;
-    margin-bottom: 48px;
+    margin-bottom: $space-12;
   }
 
-  &-lists {
-    .union-img {
-      width: 648px;
-      height: 240px;
-    }
-    .union-img-sm {
+  .crossover {
+    &__img--sm {
       display: none;
-      width: 348px;
-      height: 240px;
     }
-    .list-name {
-      font-family: $font-roboto;
+    &__title {
       font-size: $h2-font-size;
-      line-height: 1.5;
       font-weight: 900;
       font-style: italic;
       color: $primary;
-      text-align: center;
       background-color: $white;
-      padding-top: 8px;
-      padding-bottom: 8px;
+      padding-top: $space-2;
+      padding-bottom: $space-2;
     }
-  }
-
-  .container {
-    padding-top: 80px;
-    padding-bottom: 80px;
   }
 
   @include respond(ipad-portrait) {
     background: url(../images/index-bg-sm.png) no-repeat;
     background-position: left top;
-    &-lists {
+    .crossover {
       flex-wrap: wrap;
-      gap: 24px;
+      gap: $space * 1.5;
       width: 100%;
-
-      &-item {
+      &__item {
         width: 50%;
-      }
-      .union-img {
-        width: 696px;
       }
     }
   }
 
   @include respond(mobile) {
     background: url(../images/index-bg-md.png) no-repeat;
-
-    &-title {
-      font-size: $h4-font-size;
-      margin-bottom: 24px;
+    .container {
+      padding-top: $space-10;
+      padding-bottom: $space-10;
     }
-
-    &-lists {
-      .union-img {
+    &__title {
+      font-size: $h4-font-size;
+      margin-bottom: $space-6;
+    }
+    .crossover {
+      &__img {
         display: none;
       }
-      .union-img-sm {
+      &__img--sm {
         display: inline-block;
       }
-    }
-    .container {
-      padding-top: 40px;
-      padding-bottom: 40px;
+      &__title {
+        font-size: $h4-font-size;
+      }
     }
   }
 }
-
 /*----------
-***************
  section--review  區塊區塊設定 
-***************b
 ------------*/
 .review {
-  &-title {
-    font-family: $font-noto;
+  &__title {
     font-size: $h2-font-size;
     color: $danger;
     font-weight: bold;
-    margin-bottom: 48px;
+    margin-bottom: $space-12;
   }
-  &-lists {
-    gap: 24px;
-
-    &_item {
-      width: 25%;
-      // border: 1px solid $light-gray;
+  .customer-card {
+    width: 100%;
+    gap: $space * 1.5;
+    align-content: flex-start;
+    &__item {
+      width: 23%;
       border-radius: 4px;
     }
-    &-img {
+    &__img {
       object-fit: cover;
     }
   }
-  &-content {
+  .customer-note {
     box-shadow: 0px 2px 6px $shadow-gray;
-    padding: 16px;
-
-    span {
+    padding: $space-4;
+    h4 {
       font-size: $font-size-base;
       font-weight: 500;
-      margin-bottom: 8px;
+      margin-bottom: $space-2;
     }
-
-    p {
+    &__text {
       font-weight: 400;
-      padding-bottom: 72px;
+      padding-bottom: $space-16;
     }
     small {
-      font-size: 14px;
+      font-size: $font-size-sm;
       color: $dark-gray;
     }
   }
-  .container {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
   @include respond(ipad-portrait) {
-    &-lists {
+    .customer-card {
       flex-wrap: wrap;
-      &_item {
+      &__item {
         width: 48%;
       }
     }
   }
-
   @include respond(mobile) {
-    &-title {
-      font-size: $h4-font-size;
-      margin-bottom: 24px;
+    .container {
+      padding-top: $space-10;
+      padding-bottom: $space-10;
     }
-    &-lists {
-      gap: 16px;
-      &_item {
+    &__title {
+      font-size: $h4-font-size;
+      margin-bottom: $space-6;
+    }
+    .customer-card {
+      gap: $space;
+      &__item {
         width: 96%;
       }
     }
-    .container {
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
   }
 }
-
 /*----------
-***************
  section--response  區塊區塊設定 
-***************
 ------------*/
 .response {
-  background-color: $secondary;
-  &-title {
+  &__title {
     font-size: $h2-font-size;
     font-weight: bold;
     color: $danger;
-    margin-bottom: 48px;
+    margin-bottom: $space-12;
   }
-
   &-form {
-    max-width: 636px;
+    width: 60%;
     margin: 0 auto;
-  }
-
-  &-description {
-    font-size: $font-size-base;
-    margin-bottom: 24px;
+    &__sub {
+      font-size: $font-size-base;
+      margin-bottom: $space-6;
+    }
   }
 
   .input-box {
-    margin-bottom: 16px;
-    .form-control {
+    margin-bottom: $space-4;
+    &__text {
       display: block;
       width: 100%;
       height: 36px;
-      margin-top: 8px;
-      padding-top: 6px;
-      padding-bottom: 6px;
-      padding-left: 12px;
+      margin-top: $space-2;
+      padding-top: $space * 1.5;
+      padding-bottom: $space * 1.5;
+      padding-left: $space-3;
     }
   }
-  .message-textarea {
-    margin-bottom: 16px;
-    .form-control {
-      resize: none;
-      height: 136px;
-    }
+  .message-textarea__text {
+    resize: none;
+    height: 136px;
   }
   .agree-box {
-    margin-bottom: 48px;
-    .agree-text {
+    margin-bottom: $space-12;
+    &__text {
       width: 24px;
       height: 24px;
-      margin-right: 4px;
+      margin-right: $space-1;
       border: 2px solid $dark;
     }
   }
   .btn {
-    font-size: $font-size-base;
-    line-height: 24px;
-    font-weight: 900;
+    display: block;
+    width: 60%;
+    font-weight: 700;
     color: $white;
-    background-color: $primary;
-    // padding: 14px 174px;
+    padding: $space-3 0;
     &:hover {
       @extend %btn-hover;
     }
     &:active {
-      background-color: rgb(146, 30, 92);
+      background-color: rgba(146, 30, 92, 0.6);
     }
   }
-
-  .container {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
   @include respond(ipad-portrait) {
-    &-title {
-      margin-bottom: 24px;
+    &__title {
+      margin-bottom: $space-6;
     }
-
     &-form {
       max-width: 576px;
     }
-
-    @include respond(mobile) {
-      &-title {
-        font-size: $h4-font-size;
-      }
-
-      // &-form {
-      //   min-width: 348px;
-      // }
-      .agree-box {
-        margin-bottom: 24px;
-      }
-      // .btn {
-      //   width: 100%;
-      // }
-      .container {
-        padding-top: 40px;
-        padding-bottom: 40px;
-      }
+  }
+  @include respond(mobile) {
+    .container {
+      padding-top: $space-10;
+      padding-bottom: $space-10;
+    }
+    &__title {
+      font-size: $h4-font-size;
+    }
+    .agree-box {
+      margin-bottom: $space-6;
+    }
+    .btn {
+      width: 100%;
     }
   }
 }
