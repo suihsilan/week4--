@@ -910,6 +910,8 @@ section series >區塊設定
     width: 100%; } }
 
 @media (max-width: 576px) {
+  .location-detail__selection {
+    width: 50%; }
   .location-detail .container {
     padding-top: 40px;
     padding-bottom: 64px; } }
