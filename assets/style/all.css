@@ -748,4 +748,170 @@ section series >區塊設定
   .response .btn {
     width: 100%; } }
 
+.storelocations .container {
+  padding-top: 6rem;
+  padding-bottom: 5rem; }
+
+.storelocations__title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 8px solid #9f1213; }
+
+.storelocations__options {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-right: 1rem; }
+
+.storelocations__select {
+  width: 40%;
+  height: 38px;
+  border: 1px solid #ced4da;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.75rem;
+  margin-bottom: 2.5rem; }
+
+.storelocations .store-card {
+  width: 100%;
+  gap: 24px; }
+  .storelocations .store-card__item {
+    width: calc((100% - 48px) / 3); }
+  .storelocations .store-card__title {
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    border: 1px solid #00000020; }
+  .storelocations .store-card__detail {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    border: 1px solid #00000020; }
+    .storelocations .store-card__detail .material-symbols-outlined {
+      font-size: 18px;
+      margin-right: 11px; }
+  .storelocations .store-card__item--btn {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #000;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .storelocations .store-card__item--btn a {
+      font-size: 19px;
+      line-height: 1.4;
+      color: #fff; }
+      .storelocations .store-card__item--btn a:hover {
+        background-color: #666666; }
+
+@media (max-width: 767px) {
+  .storelocations .container {
+    padding-top: 5rem;
+    padding-bottom: 5rem; }
+  .storelocations .store-card__item {
+    width: calc((100% - 48px) / 2); } }
+
+@media (max-width: 576px) {
+  .storelocations .container {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem; }
+  .storelocations__title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem; }
+  .storelocations__options {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-right: 0.5rem; }
+  .storelocations__select {
+    width: 30%;
+    margin-bottom: 1.5rem; }
+  .storelocations .store-card__item {
+    width: 100%; } }
+
+.location-detail .container {
+  padding-top: 96px;
+  padding-bottom: 80px; }
+
+.location-detail__title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 32px;
+  padding-left: 16px;
+  border-left: 8px solid #9f1213; }
+
+.location-detail__options {
+  font-size: 1.5rem;
+  line-height: 36px;
+  font-weight: 400;
+  margin-right: 16px; }
+
+.location-detail__selection {
+  width: 304px;
+  height: 38px;
+  border: 1px solid #ced4da;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  margin-bottom: 40px; }
+
+.location-detail .location-box {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .location-detail .location-box .location-card {
+    width: 39%; }
+    .location-detail .location-box .location-card__title {
+      font-size: 1.5rem;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 24px;
+      border: 1px solid #00000020; }
+    .location-detail .location-box .location-card__cardbody {
+      padding: 16px;
+      border: 1px solid #00000020; }
+      .location-detail .location-box .location-card__cardbody .material-symbols-outlined {
+        font-size: 18px;
+        margin-right: 11px; }
+  .location-detail .location-box .location-map {
+    width: 59%;
+    height: 414px; }
+
+@media (max-width: 992px) {
+  .location-detail .location-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .location-detail .location-box .location-card {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 24px; }
+      .location-detail .location-box .location-card-picblock {
+        width: 48%; }
+      .location-detail .location-box .location-card-text {
+        width: 48%; }
+    .location-detail .location-box .location-map {
+      width: 100%; } }
+
+@media (max-width: 767px) {
+  .location-detail .container {
+    padding-top: 80px;
+    padding-bottom: 80px; }
+  .location-detail .location-box .location-card-picblock {
+    width: 100%; }
+  .location-detail .location-box .location-card-text {
+    width: 100%; }
+  .location-detail .location-box .location-map {
+    width: 100%; } }
+
+@media (max-width: 576px) {
+  .location-detail .container {
+    padding-top: 40px;
+    padding-bottom: 64px; } }
+
 /*# sourceMappingURL=all.css.map */

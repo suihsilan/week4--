@@ -48,43 +48,49 @@
     </header>
 
     
-<div class="branchlocation">
+<div class="location-detail">
   <div class="container">
-    <h1 class="branch-location-title">門市據點</h1>
-    <form action="" class="branch-area">
+    <h2 class="location-detail__title">門市據點</h2>
+    <form action="" class="location-detail__form">
       <fieldset>
-        <label class="branch-ops" for="branch">選擇分店</label>
-        <select class="b-selection" name="branch" id="branch">
+        <label class="location-detail__options" for="branch">選擇分店</label>
+        <select class="location-detail__selection" name="branch" id="branch">
           <option>台北中山旗艦店</option>
           <option>台中旗艦店</option>
           <option>高雄博愛旗艦店</option>
         </select>
       </fieldset>
     </form>
-    <main class="branch-info d-flex jc-space-between">
-      <ul class="branch-lists">
-        <li class="branch-pic">
-          <img src="./assets/images/store-1.png" alt="台北中山旗艦店景" />
-        </li>
-        <li class="branch-card">
-          <h2 class="branch-card-title">中山旗艦店</h2>
-          <ul class="select-cardbody">
-            <li>
+
+    <main class="location-box d-flex jc-space-between ai-center">
+      <div class="location-card">
+        <div class="location-card-picblock">
+          <img
+            class="location-card-pic"
+            src="./assets/images/store-1.png"
+            alt="台北中山旗艦店景"
+          />
+        </div>
+        <div class="location-card-text">
+          <h3 class="location-card__title">中山旗艦店</h3>
+          <div class="location-card__cardbody">
+            <div class="d-flex">
               <span class="material-symbols-outlined">call</span
-              ><span>電話:(02)000-1234</span>
-            </li>
-            <li>
+              ><a>電話:(02)000-1234</a>
+            </div>
+            <div class="d-flex">
               <span class="material-symbols-outlined"> schedule </span
               ><span>營業時間:10:00-21:00</span>
-            </li>
-            <li>
+            </div>
+            <div class="d-flex">
               <span class="material-symbols-outlined"> location_on </span
               ><span>地址:台北市中山區南京東路25巷2-1號</span>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <div class="branch-map">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="location-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4655215369216!2d121.53571001500654!3d25.05220628396382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abdf93d4d97b%3A0xa1e26471ae5697b8!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDljZfkuqzmnbHot6_kuInmrrUyNeiZnw!5e0!3m2!1szh-TW!2stw!4v1605278077078!5m2!1szh-TW!2stw"
           width="100%"
