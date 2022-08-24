@@ -1,111 +1,99 @@
-// .branchlocation {
-//   .branch-location-title {
-//     font-family: $font-noto;
-//     font-size: $h2-font-size;
-//     font-weight: 900;
-//     margin-bottom: 32px;
-//     padding-left: 16px;
-//     border-left: 8px solid $border-left;
-//   }
-//   .branch-ops {
-//     font-size: $h4-font-size;
-//     line-height: 36px;
-//     font-weight: 400;
-//     margin-right: 16px;
-//   }
-//   .b-selection {
-//     width: 304px;
-//     height: 38px;
-//     border: 1px solid #ced4da;
-//     padding-top: 6px;
-//     padding-bottom: 6px;
-//     padding-left: 12px;
-//     margin-bottom: 40px;
-//   }
-//   .branch-info {
-//     .branch-lists {
-//       width: 39%;
-//     }
-//     .branch-map {
-//       width: 59%;
-//     }
-//   }
-//   .branch-card-title {
-//     font-size: $h4-font-size;
-//     padding-top: 8px;
-//     padding-bottom: 8px;
-//     padding-left: 24px;
-//     border: 1px solid #00000020;
-//   }
-//   .select-cardbody {
-//     padding-top: 16px;
-//     padding-bottom: 16px;
-//     padding-left: 24px;
-//     border: 1px solid #00000020;
-//     .material-symbols-outlined {
-//       font-size: 18px;
-//       margin-right: 11px;
-//     }
-//   }
-
-//   .container {
-//     padding-top: 96px;
-//     padding-bottom: 80px;
-//   }
-
-//   @include pad {
-//     .branch-info {
-//       flex-direction: column;
-//       .branch-lists {
-//         width: 100%;
-//         flex-direction: row;
-//         justify-content: space-between;
-//         align-items: center;
-//         margin-bottom: 24px;
-//         .branch-pic {
-//           width: 43%;
-//         }
-//         .branch-card {
-//           width: 55%;
-//         }
-//       }
-//       .branch-map {
-//         width: 100%;
-//         height: 414px;
-//       }
-//     }
-//     .branch-lists {
-//       display: flex;
-//     }
-//     .container {
-//       padding-top: 80px;
-//       padding-bottom: 80px;
-//     }
-//   }
-//   @include mobile {
-//     .branch-location-title {
-//       font-size: $h4-font-size;
-//       margin-bottom: 24px;
-//     }
-//     .branch-ops {
-//       font-size: $font-size-base;
-//       line-height: 1.5;
-//       margin-right: 8px;
-//     }
-//     .branch-info {
-//       .branch-lists {
-//         flex-direction: column;
-//         .branch-pic {
-//           width: 100%;
-//         }
-//         .branch-card {
-//           width: 100%;
-//         }
-//       }
-//     }
-//     .container {
-//       padding-top: 40px;
-//       padding-bottom: 64px;
-//     }
-//   }
-// }
+.location-detail {
+  .container {
+    padding-top: 96px;
+    padding-bottom: 80px;
+  }
+  &__title {
+    font-size: $h2-font-size;
+    font-weight: 900;
+    margin-bottom: 32px;
+    padding-left: 16px;
+    border-left: 8px solid $border-left;
+  }
+  &__options {
+    font-size: $h4-font-size;
+    line-height: 36px;
+    font-weight: 400;
+    margin-right: 16px;
+  }
+  &__selection {
+    width: 304px;
+    height: 38px;
+    border: 1px solid #ced4da;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    margin-bottom: 40px;
+  }
+  .location-box {
+    flex-wrap: wrap;
+    .location-card {
+      width: 39%;
+      &__title {
+        font-size: $h4-font-size;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 24px;
+        border: 1px solid #00000020;
+      }
+      &__cardbody {
+        padding: 16px;
+        border: 1px solid #00000020;
+        .material-symbols-outlined {
+          font-size: 18px;
+          margin-right: 11px;
+        }
+      }
+    }
+    .location-map {
+      width: 59%;
+      height: 414px;
+    }
+  }
+  @include respond(ipad-landscape) {
+    .location-box {
+      flex-direction: column;
+      .location-card {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-bottom: 24px;
+        &-picblock {
+          width: 48%;
+        }
+        &-text {
+          width: 48%;
+        }
+      }
+      .location-map {
+        width: 100%;
+      }
+    }
+  }
+  @include respond(ipad-portrait) {
+    .container {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    .location-box {
+      .location-card {
+        &-picblock {
+          width: 100%;
+        }
+        &-text {
+          width: 100%;
+        }
+      }
+      .location-map {
+        width: 100%;
+      }
+    }
+  }
+  @include respond(mobile) {
+    .container {
+      padding-top: 40px;
+      padding-bottom: 64px;
+    }
+  }
+}

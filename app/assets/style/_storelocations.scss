@@ -1,100 +1,103 @@
-// .storelocations {
-//   .stores-location-title {
-//     font-family: $font-noto;
-//     font-size: $h2-font-size;
-//     font-weight: 900;
-//     margin-bottom: 32px;
-//     padding-left: 16px;
-//     border-left: 8px solid $border-left;
-//   }
-//   .cities-ops {
-//     font-size: $h4-font-size;
-//     line-height: 36px;
-//     font-weight: 400;
-//     margin-right: 16px;
-//   }
-//   .selection {
-//     width: 304px;
-//     height: 38px;
-//     border: 1px solid #ced4da;
-//     padding-top: 6px;
-//     padding-bottom: 6px;
-//     padding-left: 12px;
-//     margin-bottom: 40px;
-//   }
-//   .cities-lists {
-//     gap: 24px;
-//   }
-//   .cities-list {
-//     width: 31%;
-//   }
-//   .card-title {
-//     font-size: 24px;
-//     padding-top: 8px;
-//     padding-bottom: 8px;
-//     padding-left: 24px;
-//     border: 1px solid #00000020;
-//   }
-//   .card-detail {
-//     padding-top: 16px;
-//     padding-bottom: 16px;
-//     padding-left: 24px;
-//     border: 1px solid #00000020;
-//     .material-symbols-outlined {
-//       font-size: 18px;
-//       margin-right: 11px;
-//     }
-//   }
-//   .btn {
-//     width: 100%;
-//     margin: 0 auto;
-//     background-color: $dark;
-//     padding-top: 16px;
-//     padding-bottom: 16px;
-//     a {
-//       font-size: 19px;
-//       line-height: 1.4;
-//       color: $white;
-//       &:hover {
-//         background-color: lighten($dark, 40%);
-//       }
-//     }
-//   }
-//   .container {
-//     padding-top: 96px;
-//     padding-bottom: 80px;
-//   }
+.storelocations {
+  .container {
+    padding-top: $space-24;
+    padding-bottom: $space-20;
+  }
+  &__title {
+    font-size: $h2-font-size;
+    font-weight: 900;
+    margin-bottom: $space-8;
+    padding-left: $space-4;
+    border-left: 8px solid $border-left;
+  }
+  &__options {
+    font-size: $h4-font-size;
+    font-weight: 400;
+    margin-right: $space-4;
+  }
+  &__select {
+    width: 40%;
+    height: 38px;
+    border: 1px solid #ced4da;
+    padding-top: $space-1 * 1.5;
+    padding-bottom: $space-1 * 1.5;
+    padding-left: $space-3;
+    margin-bottom: $space-10;
+  }
+  .store-card {
+    width: 100%;
+    gap: 24px;
+    &__item {
+      width: calc((100% - 48px) / 3);
+    }
+    &__title {
+      font-size: $h4-font-size;
+      padding-top: $space-2;
+      padding-bottom: $space-2;
+      padding-left: $space-6;
+      border: 1px solid #00000020;
+    }
+    &__detail {
+      padding-top: $space-4;
+      padding-bottom: $space-4;
+      padding-left: $space-6;
+      border: 1px solid #00000020;
+      .material-symbols-outlined {
+        font-size: 18px;
+        margin-right: 11px;
+      }
+    }
+    &__item--btn {
+      width: 100%;
+      margin: 0 auto;
+      background-color: $dark;
+      padding-top: $space-4;
+      padding-bottom: $space-4;
+      a {
+        font-size: 19px;
+        line-height: 1.4;
+        color: $white;
+        &:hover {
+          background-color: lighten($dark, 40%);
+        }
+      }
+    }
+  }
 
-//   @include pad {
-//     .cities-list {
-//       width: 41%;
-//     }
-//     .container {
-//       padding-top: 80px;
-//       padding-bottom: 80px;
-//     }
-//   }
+  @include respond(ipad-portrait) {
+    .container {
+      padding-top: $space-20;
+      padding-bottom: $space-20;
+    }
+    .store-card {
+      &__item {
+        width: calc((100% - 48px) / 2);
+      }
+    }
+  }
 
-//   @include mobile {
-//     .stores-location-title {
-//       font-size: $h4-font-size;
-//       margin-bottom: 24px;
-//     }
-//     .cities-ops {
-//       font-size: $font-size-base;
-//       line-height: 1.5;
-//       margin-right: 8px;
-//     }
-//     .selection {
-//       width: 276px;
-//       margin-bottom: 24px;
-//     }
-//     .cities-list {
-//       width: 100%;
-//     }
-//     .container {
-//       padding-top: 40px;
-//       padding-bottom: 64px;
-//     }
-//   }
-// }
+  @include respond(mobile) {
+    .container {
+      padding-top: $space-10;
+      padding-bottom: $space-16;
+    }
+    &__title {
+      font-size: $h4-font-size;
+      margin-bottom: $space-6;
+    }
+    &__options {
+      font-size: $font-size-base;
+      line-height: 1.5;
+      margin-right: $space-2;
+    }
+    &__select {
+      width: 30%;
+      margin-bottom: $space-6;
+    }
+    .store-card {
+      &__item {
+        width: 100%;
+      }
+    }
+  }
+}
