@@ -914,6 +914,11 @@ section series >區塊設定
     .location-detail .location-box .location-map {
       width: 100%; } }
 
+@media (max-width: 992px) and (max-width: 835px) {
+  .location-detail .location-box .location-card__cardbody {
+    padding-top: 17px;
+    padding-bottom: 17px; } }
+
 @media (max-width: 992px) and (max-width: 767px) {
   .location-detail .container {
     padding-top: 80px;
