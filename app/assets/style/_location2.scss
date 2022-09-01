@@ -29,6 +29,13 @@
     flex-wrap: wrap;
     .location-card {
       width: 39%;
+      &__banner {
+        background-image: url(../images/store-1.png);
+        height: 224px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
       &__title {
         font-size: $h4-font-size;
         padding-top: 8px;
@@ -37,8 +44,11 @@
         border: 1px solid #00000020;
       }
       &__cardbody {
-        padding: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
         border: 1px solid #00000020;
+        font-size: 20px;
         .material-symbols-outlined {
           font-size: 18px;
           margin-right: 11px;
@@ -65,35 +75,46 @@
         &-text {
           width: 48%;
         }
-      }
-      .location-map {
-        width: 100%;
-      }
-    }
-  }
-  @include respond(ipad-portrait) {
-    .container {
-      padding-top: 80px;
-      padding-bottom: 80px;
-    }
-    .location-box {
-      .location-card {
-        &-picblock {
-          width: 100%;
-        }
-        &-text {
-          width: 100%;
+        &__cardbody {
+          padding-top: 32px;
+          padding-bottom: 32px;
         }
       }
       .location-map {
         width: 100%;
       }
     }
-  }
-  @include respond(mobile) {
-    .container {
-      padding-top: 40px;
-      padding-bottom: 64px;
+    @include respond(ipad-portrait) {
+      .container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+      .location-box {
+        .location-card {
+          &-picblock {
+            width: 100%;
+          }
+          &-text {
+            width: 100%;
+          }
+          &__cardbody {
+            padding-top: 16px;
+            padding-bottom: 16px;
+          }
+        }
+        .location-map {
+          width: 100%;
+        }
+      }
+    }
+    @include respond(mobile) {
+      &__selection {
+        width: 50%;
+      }
+      .container {
+        padding-top: 40px;
+        padding-bottom: 64px;
+      }
     }
   }
 }

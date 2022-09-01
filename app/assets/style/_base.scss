@@ -140,9 +140,14 @@ h5,
   gap: $space * 4;
 }
 
-/*-------padding設定----------*/
+/*-------padding margin設定----------*/
 //4的倍數
 .py-20 {
   padding-top: $space-20;
   padding-bottom: $space-20;
+}
+
+.my-2 {
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
