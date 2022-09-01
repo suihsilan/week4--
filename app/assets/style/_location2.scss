@@ -84,6 +84,16 @@
         width: 100%;
       }
     }
+    @include pre-ipad {
+      .location-box {
+        .location-card {
+          &__cardbody {
+            padding-top: 17px;
+            padding-bottom: 17px;
+          }
+        }
+      }
+    }
     @include respond(ipad-portrait) {
       .container {
         padding-top: 80px;

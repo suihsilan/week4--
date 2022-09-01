@@ -16,6 +16,12 @@
   }
 }
 
+@mixin pre-ipad {
+  @media (max-width: 835px) {
+    @content;
+  }
+}
+
 @mixin hide-text {
   text-indent: 101%; //圖片取代文字
   white-space: nowrap;
